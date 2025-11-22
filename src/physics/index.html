@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics | EduProject</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- MathJax Configuration -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <!-- MathJax (CDN) -->
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="nav-inner">
+        <h2>EduProject</h2>
+        <div>
+            <a href="../index.html">Home</a>
+            <a href="../math/index.html">Math</a>
+            <a href="index.html">Physics</a>
+            <a href="../informatics/index.html">Informatics</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <main>
+
+        <section class="content-block">
+            <h2>Why English?</h2>
+            <p>
+                Physics research and academic materials worldwide use English.
+                Using English here keeps terminology consistent with global standards.
+            </p>
+        </section>
+
+        <section class="content-block">
+            <h2>Interactive Simulation</h2>
+            <p>Physics becomes intuitive when you manipulate variables interactively.</p>
+
+            <iframe
+                    src="https://phet.colorado.edu/sims/html/projectile-motion/latest/projectile-motion_en.html"
+                    class="sim-frame">
+            </iframe>
+        </section>
+
+        <section class="content-block">
+            <h2>MathJax Example</h2>
+
+            <p class="math-example">
+                \[
+                \vec{F} = m \frac{d\vec{v}}{dt}
+                \]
+            </p>
+
+            <p class="math-example">
+                \[
+                E = \frac{1}{2} k x^2
+                \]
+            </p>
+        </section>
+
+        <section class="content-block">
+            <h2>Upcoming Chapters</h2>
+            <ul class="chapter-list">
+                <li><a href="mechanics.html">Mechanics</a></li>
+                <li><a href="electromagnetism.html">Electromagnetism</a></li>
+                <li><a href="thermodynamics.html">Thermodynamics</a></li>
+                <li><a href="modern.html">Modern Physics</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>EduProject &copy; 2025 | Licensed under GPL v3+</p>
+</footer>
+
+</body>
+</html>
