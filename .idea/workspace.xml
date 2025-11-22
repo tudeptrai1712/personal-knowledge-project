@@ -4,15 +4,150 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11fee3b5-fd9f-4cf8-9818-4b0edad50ff6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="11fee3b5-fd9f-4cf8-9818-4b0edad50ff6" name="Changes" comment="add and refine subjects' objects rendering">
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/.github/FUNDING.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/.github/ISSUE_TEMPLATE/bug_report.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/.github/ISSUE_TEMPLATE/feature_request.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/.github/workflows/publish.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/CONTRIBUTING.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/a11y/assistive-mml.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/a11y/complexity.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/a11y/explorer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/a11y/semantic-enrich.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/a11y/speech.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/a11y/sre.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/adaptors/jsdom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/adaptors/linkedom.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/adaptors/liteDOM.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/core.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/asciimath.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/mml.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/mml/entities.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/mml/extensions/mml3.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/mml/extensions/mml3.sef.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex-base.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/action.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/ams.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/amscd.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/autoload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/bbm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/bboldx.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/bbox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/begingroup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/boldsymbol.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/braket.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/bussproofs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/cancel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/cases.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/centernot.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/color.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/colortbl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/colorv2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/configmacros.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/dsfont.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/empheq.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/enclose.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/extpfeil.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/gensymb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/mathtools.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/mhchem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/newcommand.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/noerrors.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/noundefined.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/physics.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/require.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/setoptions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/tagformat.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/texhtml.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/textcomp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/textmacros.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/unicode.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/units.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/upgreek.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/input/tex/extensions/verb.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/loader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/mml-chtml-nofont.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/mml-chtml.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/mml-svg-nofont.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/mml-svg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/node-main-setup.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/node-main.cjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/node-main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/node-main.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/output/chtml.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/output/svg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/require.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/sre/mathmaps/af.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/sre/mathmaps/base.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/sre/mathmaps/ca.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/sre/mathmaps/da.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/sre/mathmaps/de.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/sre/mathmaps/en.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/sre/mathmaps/es.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/sre/mathmaps/euro.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/sre/mathmaps/fr.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/sre/mathmaps/hi.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/sre/mathmaps/it.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/sre/mathmaps/ko.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/sre/mathmaps/nb.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/sre/mathmaps/nemeth.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/sre/mathmaps/nn.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/sre/mathmaps/sv.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/sre/require.d.mts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/sre/require.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/sre/speech-worker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/startup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/tex-chtml-nofont.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/tex-chtml.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/tex-mml-chtml-nofont.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/tex-mml-chtml.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/tex-mml-svg-nofont.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/tex-mml-svg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/tex-svg-nofont.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/tex-svg.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/ui/lazy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/ui/menu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/mathjax/MathJax-master/ui/safe.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/js/geogebra-loader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/js/init-html.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/js/math-init.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/js/mathjax-loader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/informatics/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/math/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/physics/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
@@ -21,22 +156,41 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SWAP_SIDES_IN_COMPARE_BRANCHES" value="true" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;tudeptrai1712&quot;
+  }
+}</component>
+  <component name="GitLabMergeRequestFiltersHistory"><![CDATA[{
   "lastFilter": {
-    "state": "OPEN",
-    "assignee": "tudeptrai1712"
+    "state": "OPENED",
+    "assignee": {
+      "type": "org.jetbrains.plugins.gitlab.mergerequest.ui.filters.GitLabMergeRequestsFiltersValue.MergeRequestsMemberFilterValue.MergeRequestsAssigneeFilterValue",
+      "username": "nhattuhong",
+      "fullname": "Nhật Tú Hồng"
+    }
   }
 }]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  <component name="GitLabMergeRequestsSettings"><![CDATA[{
   "selectedUrlAndAccountId": {
-    "url": "https://github.com/tudeptrai1712/personal-knowledge-project.git",
-    "accountId": "90b09853-177e-41ac-9fb8-b5cd203029b0"
+    "first": "https://gitlab.com/nhattuhong/personal-knowledge-project.git",
+    "second": "ffb441ac-54a8-4c61-a966-93a22296c53b"
   }
 }]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/tudeptrai1712/personal-knowledge-project.git&quot;,
+    &quot;accountId&quot;: &quot;90b09853-177e-41ac-9fb8-b5cd203029b0&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="35pNbG91Uv2IsMWJiABpg4LZPVw" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -44,7 +198,11 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.index.html.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Node.js.index.js.executor": "Run",
+    "Node.js.init-html.js.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -52,15 +210,27 @@
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "0.1.0",
     "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/home/tudeptrai/WebstormProjects/untitled/src/informatics",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.github.copilot.settings.customization.CustomizationConfigurable",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/informatics" />
+      <recent name="$PROJECT_DIR$/src/physics" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/js" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -75,12 +245,27 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1763803123642</updated>
-      <workItem from="1763803124893" duration="2419000" />
+      <workItem from="1763803124893" duration="5171000" />
+      <workItem from="1763847747794" duration="3505000" />
     </task>
+    <task id="LOCAL-00001" summary="create future proof dirs">
+      <option name="closed" value="true" />
+      <created>1763819444615</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1763819444615</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="create future proof dirs" />
+    <MESSAGE value="add and refine subjects' objects rendering" />
+    <option name="LAST_COMMIT_MESSAGE" value="add and refine subjects' objects rendering" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
