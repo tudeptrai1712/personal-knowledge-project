@@ -3,42 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Applications of Derivatives | Personal Knowledge Project</title>
+    <title>Function Analysis 101 | Personal Knowledge Project</title>
 
-    <!-- Project Stylesheet -->
+    <!-- Global CSS -->
     <link rel="stylesheet" href="../../../assets/css/style.css">
 
-    <!-- MathJax Configuration -->
+    <!-- MathJax Config -->
     <script>
-        MathJax = {
+        window.MathJax = {
             tex: {
                 inlineMath: [['$', '$'], ['\\(', '\\)']],
-                displayMath: [['$$', '$$'], ['\\[', '\\]']],
-                processEscapes: true
-            },
-            options: {
-                enableMenu: false
-            },
-            svg: {
-                fontCache: 'global'
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
             }
         };
     </script>
 
     <!-- MathJax CDN -->
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-    
-    <!-- GeoGebra Loader -->
-    <script src="../../../assets/js/geogebra-loader.js"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
-<nav>
+<!-- Navigation -->
+<nav class="navbar">
     <div class="nav-inner">
-        <h2>EduProject</h2>
-        <div>
+        <div class="nav-title">EduProject</div>
+        <div class="nav-links">
             <a href="../../../index.html">Home</a>
             <a href="../../index.html">Math</a>
             <a href="../../../physics/index.html">Physics</a>
@@ -47,73 +37,131 @@
     </div>
 </nav>
 
-<!-- MAIN CONTENT -->
 <div class="container">
+
     <header class="page-header">
-        <h1>Applications of Derivatives</h1>
-        <p class="subtitle">Using derivatives to analyze function behavior.</p>
+        <h1>Function Analysis 101</h1>
+        <p class="subtitle">Detailed lecture on analyzing functions with interactive practice.</p>
     </header>
 
     <main>
-        <section class="content-block">
-            <h2>Analyzing Function Behavior</h2>
-            <p>
-                Derivatives are a fundamental tool in calculus for analyzing the behavior of functions. By examining the first and second derivatives of a function, we can determine where it is increasing or decreasing, find local maximum and minimum values, and identify intervals of concavity and points of inflection.
-            </p>
-        </section>
 
+        <!-- Detailed Lecture -->
         <section class="content-block">
-            <h2>Critical Points and Intervals of Increase/Decrease</h2>
-            <p>
-                A <strong>critical point</strong> of a function $f$ is a point $(c, f(c))$ in the domain of $f$ where either $f'(c) = 0$ or $f'(c)$ is undefined. These points are candidates for local extrema.
-            </p>
-            <p>The <strong>First Derivative Test</strong> helps us determine the intervals where a function is increasing or decreasing:</p>
+            <h2>1. Understanding Functions</h2>
+            <p>A <strong>function</strong> $f(x)$ is a rule that assigns exactly one output $y$ for each input $x$. To analyze a function, we focus on several key features:</p>
             <ul>
-                <li>If $f'(x) > 0$ on an interval, then $f$ is <strong>increasing</strong> on that interval.</li>
-                <li>If $f'(x) < 0$ on an interval, then $f$ is <strong>decreasing</strong> on that interval.</li>
+                <li><strong>Domain:</strong> All $x$ values where $f(x)$ is defined. Example: $f(x) = \frac{1}{x}$ has domain $x \neq 0$.</li>
+                <li><strong>Range:</strong> All possible outputs. Example: $f(x) = x^2$ has range $y \ge 0$.</li>
+                <li><strong>Asymptotes:</strong> Lines that the graph approaches but never reaches. Can be vertical, horizontal, or oblique.</li>
+                <li><strong>Extremums:</strong> Points where the function reaches local maxima or minima. Often found by solving $f'(x) = 0$.</li>
             </ul>
         </section>
 
         <section class="content-block">
-            <h2>Local Maxima and Minima</h2>
-            <p>
-                The First Derivative Test can also be used to classify critical points as local maxima or minima:
-            </p>
+            <h2>2. Domain and Range</h2>
+            <p>Step-by-step:</p>
+            <ol>
+                <li><strong>Domain:</strong> Look for values where the function is undefined (division by zero, square roots of negative numbers, logarithms of non-positive numbers).</li>
+                <li><strong>Range:</strong> Analyze the outputs by looking at the graph or solving inequalities for $y$ in terms of $x$.</li>
+            </ol>
+            <p><strong>Example:</strong> $f(x) = \sqrt{x-2}$</p>
             <ul>
-                <li>A critical point is a <strong>local maximum</strong> if the function changes from increasing to decreasing at that point.</li>
-                <li>A critical point is a <strong>local minimum</strong> if the function changes from decreasing to increasing at that point.</li>
+                <li>Domain: $x - 2 \ge 0 \Rightarrow x \ge 2$</li>
+                <li>Range: $y \ge 0$</li>
             </ul>
         </section>
 
         <section class="content-block">
-            <h2>Concavity and Points of Inflection</h2>
-            <p>
-                The second derivative, $f''(x)$, tells us about the concavity of the function $f(x)$.
-            </p>
+            <h2>3. Asymptotes</h2>
             <ul>
-                <li>If $f''(x) > 0$ on an interval, then $f$ is <strong>concave up</strong> on that interval (like a cup).</li>
-                <li>If $f''(x) < 0$ on an interval, then $f$ is <strong>concave down</strong> on that interval (like a frown).</li>
+                <li><strong>Vertical asymptotes:</strong> Set denominator = 0. Example: $f(x) = \frac{1}{x-3} \Rightarrow x=3$ is vertical asymptote.</li>
+                <li><strong>Horizontal asymptotes:</strong> Compute $\lim_{x\to\infty} f(x)$ and $\lim_{x\to-\infty} f(x)$. Example: $f(x) = \frac{2x+1}{x-3} \Rightarrow y = 2$.</li>
+                <li><strong>Oblique asymptotes:</strong> Occur when degree numerator = degree denominator + 1. Use polynomial division.</li>
             </ul>
-            <p>
-                A <strong>point of inflection</strong> is a point on the curve where the concavity changes. These occur where $f''(x) = 0$ or is undefined.
-            </p>
         </section>
 
         <section class="content-block">
-            <h2>Interactive Function Analysis with GeoGebra</h2>
-            <iframe
-                src="https://www.geogebra.org/classic"
-                class="sim-frame">
-            </iframe>
+            <h2>4. Extrema</h2>
+            <p>Local maxima and minima occur where the derivative is zero or undefined.</p>
+            <p>Step-by-step:</p>
+            <ol>
+                <li>Compute $f'(x)$.</li>
+                <li>Solve $f'(x) = 0$ for critical points.</li>
+                <li>Check $f''(x)$ or use first derivative test to classify maxima/minima.</li>
+            </ol>
+            <p><strong>Example:</strong> $f(x) = x^2 - 4x + 3$</p>
+            <ul>
+                <li>$f'(x) = 2x - 4 = 0 \Rightarrow x=2$</li>
+                <li>Check second derivative: $f''(x) = 2 > 0 \Rightarrow$ local minimum at $(2, f(2)) = (2, -1)$</li>
+            </ul>
+        </section>
+
+        <!-- GeoGebra Practice -->
+        <section class="content-block">
+            <h2>Interactive Practice</h2>
+            <p>Use the blank GeoGebra calculator below to plot any function, find domain, range, asymptotes, and extrema.</p>
+            <div class="geogebra-container">
+                <iframe 
+                    src="https://www.geogebra.org/calculator" 
+                    title="GeoGebra Calculator" 
+                    width="100%" 
+                    height="500" 
+                    frameborder="0" 
+                    scrolling="no">
+                </iframe>
+            </div>
+        </section>
+
+        <!-- Exercises -->
+        <section class="content-block">
+            <h2>Exercises</h2>
+            <p>Analyze each function using GeoGebra and your lecture notes:</p>
+            <ol>
+                <li>$f(x) = x^3 - 3x^2 + 2$ — find domain, range, and extremums.</li>
+                <li>$f(x) = \frac{x+1}{x-2}$ — find vertical & horizontal asymptotes.</li>
+                <li>$f(x) = \sqrt{x-1}$ — find domain and range.</li>
+                <li>$f(x) = \sin(x)$ — find maxima, minima, and zeros.</li>
+                <li>Choose your own function and identify all key features.</li>
+            </ol>
+        </section>
+
+        <!-- Tips -->
+        <section class="content-block">
+            <h2>Tips</h2>
+            <ul>
+                <li>Always check for undefined points first for domain and vertical asymptotes.</li>
+                <li>Use limits to determine horizontal asymptotes.</li>
+                <li>Derivatives are your main tool for extremums.</li>
+                <li>GeoGebra is your visual check — compare analytical vs graphical findings.</li>
+            </ul>
         </section>
 
     </main>
 </div>
 
-<!-- FOOTER -->
 <footer>
-    <p>EduProject &copy; 2025 | Licensed under GPL v3+</p>
+    <p>EduProject © 2025 | GPLv3+</p>
 </footer>
+
+<style>
+    /* Responsive GeoGebra container */
+    .geogebra-container {
+        width: 100%;
+        max-width: 100%;
+        height: 500px;
+        margin: 1em 0;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .geogebra-container iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+</style>
 
 </body>
 </html>

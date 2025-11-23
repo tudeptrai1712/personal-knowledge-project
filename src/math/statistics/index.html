@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Statistics | Personal Knowledge Project</title>
+    <title>Statistics 101 | Personal Knowledge Project</title>
 
     <!-- Global CSS -->
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
 
     <!-- MathJax Config -->
     <script>
@@ -40,86 +40,106 @@
 <div class="container">
 
     <header class="page-header">
-        <h1>Statistics</h1>
-        <p class="subtitle">Grouped and ungrouped data, core statistical concepts, and references.</p>
+        <h1>Statistics 101</h1>
+        <p class="subtitle">A clear introduction to data, variation, and the methods used to understand them.</p>
     </header>
 
     <main>
 
-        <!-- Section: Ungrouped Data -->
+        <!-- What is Statistics -->
         <section class="content-block">
-            <h2>Ungrouped Data (Dữ liệu chưa nhóm)</h2>
-            <p>Ungrouped data refers to raw, individual observations that have not been organized into classes or intervals.</p>
+            <h2>What is Statistics?</h2>
+            <p>
+                Statistics is the mathematical science of collecting, organizing, analyzing, and interpreting data.
+                It helps us understand patterns, make predictions, and make decisions when information is incomplete.
+            </p>
+
+            <p>In school mathematics, statistics focuses on:</p>
 
             <ul class="chapter-list">
-                <li><a href="ungrouped/mean.html">Mean of Ungrouped Data</a></li>
+                <li>Describing data using measures such as mean, median, mode, and variance.</li>
+                <li>Organizing data in tables or groups.</li>
+                <li>Understanding how data varies and what that variation means.</li>
+            </ul>
+        </section>
+
+        <!-- Why Statistics Matters -->
+        <section class="content-block">
+            <h2>Why Does Statistics Matter?</h2>
+            <p>
+                Statistics appears everywhere: science, economics, medicine, engineering, and even daily life.
+                Whenever data exists — test scores, temperatures, populations, or measurements — statistics gives us
+                the tools to make sense of it.
+            </p>
+
+            <p>Some real-world uses include:</p>
+            <ul class="chapter-list">
+                <li>Evaluating school performance from exam results.</li>
+                <li>Predicting weather using historical data.</li>
+                <li>Measuring variation in experiments.</li>
+                <li>Making informed decisions based on probabilities.</li>
+            </ul>
+        </section>
+
+        <!-- Ungrouped vs Grouped -->
+        <section class="content-block">
+            <h2>Two Types of Data</h2>
+
+            <h3>1. Ungrouped Data</h3>
+            <p>
+                Individual values listed exactly as they are.  
+                Example: test scores of 5 students — 7, 8, 9, 10, 8.
+            </p>
+
+            <ul class="chapter-list">
+                <li><a href="ungrouped/mean.html">Mean</a></li>
                 <li><a href="ungrouped/median.html">Median</a></li>
                 <li><a href="ungrouped/mode.html">Mode</a></li>
                 <li><a href="ungrouped/variance.html">Variance & Standard Deviation</a></li>
                 <li><a href="ungrouped/range.html">Range</a></li>
             </ul>
 
-            <h3>Key Formulas (Ungrouped)</h3>
+            <h4>Example formula:</h4>
             <p>
                 Mean:
                 \[
                 \bar{x} = \frac{1}{n} \sum_{i=1}^{n} x_i
                 \]
             </p>
-
-            <p>
-                Variance:
-                \[
-                s^2 = \frac{1}{n} \sum_{i=1}^n (x_i - \bar{x})^2
-                \]
-            </p>
         </section>
 
-        <!-- Section: Grouped Data -->
         <section class="content-block">
-            <h2>Grouped Data (Dữ liệu đã nhóm)</h2>
-            <p>Grouped data organizes observations into class intervals, each with a frequency.</p>
+            <h3>2. Grouped Data</h3>
+            <p>
+                Data is organized into intervals called “classes,” each with a frequency.  
+                Example: groups of heights, scores, or ages.
+            </p>
 
             <ul class="chapter-list">
                 <li><a href="grouped/mean.html">Mean of Grouped Data</a></li>
-                <li><a href="grouped/median.html">Median for Grouped Data</a></li>
-                <li><a href="grouped/mode.html">Mode for Grouped Data</a></li>
-                <li><a href="grouped/variance.html">Variance & SD for Grouped Data</a></li>
+                <li><a href="grouped/median.html">Median of Grouped Data</a></li>
+                <li><a href="grouped/mode.html">Mode of Grouped Data</a></li>
+                <li><a href="grouped/variance.html">Variance & SD (Grouped)</a></li>
                 <li><a href="grouped/frequency-table.html">Frequency Table Construction</a></li>
             </ul>
 
-            <h3>Key Formulas (Grouped)</h3>
-
+            <h4>Example formula:</h4>
             <p>
                 Mean:
                 \[
                 \bar{x} = \frac{\sum f_i x_i}{\sum f_i}
                 \]
             </p>
-
-            <p>
-                Class midpoint:
-                \[
-                x_i = \frac{L_i + U_i}{2}
-                \]
-            </p>
-
-            <p>
-                Variance:
-                \[
-                s^2 = \frac{\sum f_i (x_i - \bar{x})^2}{\sum f_i}
-                \]
-            </p>
         </section>
 
-        <!-- Section: References -->
+        <!-- Reference Section -->
         <section class="content-block">
             <h2>References</h2>
             <ul class="chapter-list">
-                <li>Vietnamese High School Math Curriculum (Bộ Giáo dục và Đào tạo)</li>
-                <li>Upper Secondary Statistics Textbooks (Toán 10, Toán 11)</li>
-                <li>MIT OCW – Introduction to Probability and Statistics</li>
+                <li>Vietnamese High School Math Curriculum (Bộ GD&ĐT)</li>
                 <li>Khan Academy – Statistics & Probability</li>
+                <li>MIT OCW – Probability & Statistics</li>
+                <li>Cambridge IGCSE Statistics</li>
             </ul>
         </section>
 

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Range of Data | Personal Knowledge Project</title>
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+
+    <!-- MathJax Config -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+
+    <!-- MathJax CDN -->
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="nav-inner">
+        <div class="nav-title">EduProject</div>
+        <div class="nav-links">
+            <a href="../../../index.html">Home</a>
+            <a href="../../index.html">Math</a>
+            <a href="../../../physics/index.html">Physics</a>
+            <a href="../../../informatics/index.html">Informatics</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <header class="page-header">
+        <h1>Range of Data</h1>
+        <p class="subtitle">The simplest measure of spread in a dataset.</p>
+    </header>
+
+    <main>
+
+        <!-- Intro -->
+        <section class="content-block">
+            <h2>What is the Range?</h2>
+            <p>
+                The <strong>range</strong> of a dataset measures the difference between the largest and smallest values. 
+                It gives a quick sense of how spread out the data is.
+            </p>
+            <p>
+                The formula for range is very simple:
+            </p>
+            <p class="math-block">
+                \[
+                \text{Range} = \text{Maximum value} - \text{Minimum value}
+                \]
+            </p>
+        </section>
+
+        <!-- Example -->
+        <section class="content-block">
+            <h2>Example</h2>
+
+            <p>Consider the dataset of student test scores:</p>
+
+            <p class="math-block">
+                \[
+                6, 7, 8, 9, 7, 10, 6, 9
+                \]
+            </p>
+
+            <ol>
+                <li>
+                    <strong>Find the maximum value:</strong>
+                    <p>Maximum = 10</p>
+                </li>
+                <li>
+                    <strong>Find the minimum value:</strong>
+                    <p>Minimum = 6</p>
+                </li>
+                <li>
+                    <strong>Subtract minimum from maximum:</strong>
+                    <p>
+                        \[
+                        \text{Range} = 10 - 6 = 4
+                        \]
+                    </p>
+                </li>
+            </ol>
+
+            <p>
+                So, the range of this dataset is <strong>4</strong>.
+            </p>
+        </section>
+
+        <!-- Notes -->
+        <section class="content-block">
+            <h2>Important Notes</h2>
+            <ul>
+                <li>The range is easy to calculate but only considers the two extreme values.</li>
+                <li>It does not account for how the other data points are distributed.</li>
+                <li>Useful as a quick measure of spread, but pair it with variance or standard deviation for more detailed analysis.</li>
+            </ul>
+        </section>
+
+    </main>
+</div>
+
+<footer>
+    <p>EduProject © 2025 | GPLv3+</p>
+</footer>
+
+</body>
+</html>

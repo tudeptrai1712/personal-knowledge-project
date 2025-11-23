@@ -3,75 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geometry | Personal Knowledge Project</title>
+    <title>3D Vector Geometry 101 | Personal Knowledge Project</title>
 
-    <!-- Global CSS -->
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- Project Stylesheet -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
 
     <!-- MathJax Configuration -->
     <script>
-        window.MathJax = {
+        MathJax = {
             tex: {
                 inlineMath: [['$', '$'], ['\\(', '\\)']],
-                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            },
+            options: {
+                enableMenu: false
+            },
+            svg: {
+                fontCache: 'global'
             }
         };
     </script>
 
     <!-- MathJax CDN -->
-    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </head>
 
 <body>
 
-<!-- Navigation -->
-<nav class="navbar">
+<!-- NAVIGATION -->
+<nav>
     <div class="nav-inner">
-        <div class="nav-title">EduProject</div>
-        <div class="nav-links">
-            <a href="../index.html">Home</a>
-            <a href="../math/index.html">Math</a>
-            <a href="../physics/index.html">Physics</a>
-            <a href="../informatics/index.html">Informatics</a>
+        <h2>EduProject</h2>
+        <div>
+            <a href="../../index.html">Home</a>
+            <a href="../index.html">Math</a>
+            <a href="../../physics/index.html">Physics</a>
+            <a href="../../informatics/index.html">Informatics</a>
         </div>
     </div>
 </nav>
 
+<!-- MAIN CONTENT -->
 <div class="container">
-
     <header class="page-header">
-        <h1>Geometry</h1>
-        <p class="subtitle">High school geometry: spatial geometry, coordinate methods, and vectors.</p>
+        <h1>3D Vector Geometry 101</h1>
+        <p class="subtitle">From lines and planes to angles in 3D space.</p>
     </header>
 
     <main>
-
-        <!-- Grade 11 -->
         <section class="content-block">
-            <h2>Grade 11</h2>
-            <h3>Topics</h3>
-            <ul class="chapter-list">
-                <li><a href="spatial-geometry/index.html">Spatial Geometry</a></li>
-                <li><a href="coordinate-methods/index.html">Coordinate Geometry Methods</a></li>
+            <h2>3D Coordinate Systems and Vectors</h2>
+            <p>
+                In a <strong>3D Cartesian coordinate system</strong>, points are represented by an ordered triplet $(x, y, z)$. Vectors are often represented as an arrow starting at the origin and ending at a point $(x, y, z)$, denoted as $\vec{v} = \langle x, y, z \rangle$. The magnitude of a vector $\vec{v} = \langle x, y, z \rangle$ is its length from the origin to the point $(x, y, z)$, calculated as $|\vec{v}| = \sqrt{x^2 + y^2 + z^2}$.
+            </p>
+            <p>
+                The <strong>dot product</strong> of two vectors $\vec{a} = \langle a_1, a_2, a_3 \rangle$ and $\vec{b} = \langle b_1, b_2, b_3 \rangle$ is a scalar value calculated as:
+            </p>
+            <p>
+                $$ \vec{a} \cdot \vec{b} = a_1b_1 + a_2b_2 + a_3b_3 $$
+            </p>
+            <p>
+                The dot product is also related to the angle $\theta$ between the vectors by the formula:
+            </p>
+            <p>
+                $$ \vec{a} \cdot \vec{b} = |\vec{a}| |\vec{b}| \cos(\theta) $$
+            </p>
+            <p>
+                This allows us to find the angle $\theta$ between two vectors: $\theta = \arccos\left(\frac{\vec{a} \cdot \vec{b}}{|\vec{a}| |\vec{b}|}\right)$. If $\vec{a} \cdot \vec{b} = 0$, the vectors are orthogonal (perpendicular).
+            </p>
+            <p>
+                The <strong>cross product</strong> of two vectors $\vec{a} = \langle a_1, a_2, a_3 \rangle$ and $\vec{b} = \langle b_1, b_2, b_3 \rangle$ is a new vector that is perpendicular to both $\vec{a}$ and $\vec{b}$. Its direction is given by the right-hand rule, and its magnitude is $|\vec{a}| |\vec{b}| \sin(\theta)$. The cross product is calculated as:
+            </p>
+            <p>
+                $$ \vec{a} \times \vec{b} = \langle a_2b_3 - a_3b_2, a_3b_1 - a_1b_3, a_1b_2 - a_2b_1 \rangle $$
+            </p>
+            <p>
+                The cross product is particularly useful for finding normal vectors to planes.
+            </p>
+        </section>
+
+        <section class="content-block">
+            <h2>Equations of Lines and Planes</h2>
+            <p>
+                A <strong>line</strong> in 3D space is determined by a point $P_0(x_0, y_0, z_0)$ and a direction vector $\vec{v} = \langle a, b, c \rangle$. Its vector equation is $\vec{r} = \vec{r}_0 + t\vec{v}$, where $t$ is a scalar parameter.
+            </p>
+            <p>
+                A <strong>plane</strong> in 3D is defined by a point $P_0(x_0, y_0, z_0)$ and a <strong>normal vector</strong> $\vec{n} = \langle a, b, c \rangle$ that is orthogonal to the plane. Its scalar equation is:
+            </p>
+            <p>
+                $$ a(x - x_0) + b(y - y_0) + c(z - z_0) = 0 $$
+            </p>
+        </section>
+
+        <section class="content-block">
+            <h2>Relationships Between Lines and Planes</h2>
+            <p>We can analyze the relationship between a line (with direction $\vec{v}$) and a plane (with normal $\vec{n}$).</p>
+            <ul>
+                <li><strong>Intersection:</strong> The line and plane intersect at a single point. This occurs if the direction vector $\vec{v}$ is not orthogonal to the normal vector $\vec{n}$ (i.e., $\vec{v} \cdot \vec{n} \neq 0$). To find the point, substitute the line's parametric equations into the plane's equation and solve for the parameter $t$.</li>
+                <li><strong>Parallelism:</strong> The line is parallel to the plane if its direction vector $\vec{v}$ is orthogonal to the plane's normal vector $\vec{n}$.
+                    <p>$$ \vec{v} \cdot \vec{n} = 0 $$</p>
+                    If a point on the line is also in the plane, the line lies entirely within the plane. Otherwise, it never intersects.
+                </li>
             </ul>
         </section>
 
-        <!-- Grade 12 -->
         <section class="content-block">
-            <h2>Grade 12</h2>
-            <h3>Topics</h3>
-            <ul class="chapter-list">
-                <li><a href="3d-coordinate-methods/index.html">Coordinate Methods in 3D Space</a></li>
-                <li><a href="vectors/index.html">Vectors</a></li>
+            <h2>Angles in 3D Environments</h2>
+            <p>The dot product is the key to finding angles between different geometric objects.</p>
+            <ul>
+                <li><strong>Angle Between Two Planes:</strong> The angle between two planes is the acute angle between their normal vectors, $\vec{n}_1$ and $\vec{n}_2$.
+                    <p>$$ \theta = \arccos
+
+\left(\frac{|\vec{n}_1 \cdot \vec{n}_2|}{|
+\vec{n}_1| |\vec{n}_2|}\right) $$</p>
+                </li>
+                <li><strong>Angle Between a Line and a Plane:</strong> This is the angle $\alpha$ between the line's direction vector $\vec{v}$ and its projection onto the plane. It is the complement of the angle $\theta$ between the line's direction vector $\vec{v}$ and the plane's normal vector $\vec{n}$.
+                    <p>$$ \sin(\alpha) = \cos(\theta) = rac{|\vec{v} \cdot \vec{n}|}{|\vec{v}| |\vec{n}|} \implies \alpha = \arcsin
+
+\left(\frac{|\vec{v} \cdot \vec{n}|}{|\vec{v}| |\vec{n}|}\right) $$</p>
+                </li>
             </ul>
         </section>
 
     </main>
-
 </div>
 
+<!-- FOOTER -->
 <footer>
-    <p>EduProject © 2025 | GPLv3+</p>
+    <p>EduProject &copy; 2025 | Licensed under GPL v3+</p>
 </footer>
 
 </body>
