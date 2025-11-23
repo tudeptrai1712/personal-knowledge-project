@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Derivatives 101 | Personal Knowledge Project</title>
+
+    <!-- Project Stylesheet -->
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+
+    <!-- MathJax Configuration -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            },
+            options: {
+                enableMenu: false
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+
+    <!-- MathJax CDN -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="nav-inner">
+        <h2>EduProject</h2>
+        <div>
+            <a href="../../../index.html">Home</a>
+            <a href="../../index.html">Math</a>
+            <a href="../../../physics/index.html">Physics</a>
+            <a href="../../../informatics/index.html">Informatics</a>
+        </div>
+    </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+    <header class="page-header">
+        <h1>Derivatives 101: The Complete Guide</h1>
+        <p class="subtitle">An AP-level overview of derivatives in calculus.</p>
+    </header>
+
+    <main>
+        <section class="content-block">
+            <h2>What is a Derivative?</h2>
+            <p>
+                The derivative of a function measures the <strong>instantaneous rate of change</strong> of the function. Geometrically, the derivative at a point is the <strong>slope of the tangent line</strong> to the function's graph at that point. It's one of the two fundamental concepts of calculus, alongside the integral.
+            </p>
+        </section>
+
+        <section class="content-block">
+            <h2>The Limit Definition of a Derivative</h2>
+            <p>
+                The derivative of a function $f(x)$, denoted as $f'(x)$, is formally defined using limits:
+            </p>
+            <p>
+                $$ f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h} $$
+            </p>
+            <p>
+                This formula calculates the slope of the secant line between two points on the curve as the distance between them, $h$, approaches zero. This limit, if it exists, gives the precise slope of the tangent line at point $x$.
+            </p>
+        </section>
+
+        <section class="content-block">
+            <h2>Basic Differentiation Rules</h2>
+            <p>To avoid using the limit definition every time, we use a set of differentiation rules.</p>
+            <ul>
+                <li><strong>The Power Rule:</strong> If $f(x) = x^n$, then $f'(x) = n \cdot x^{n-1}$.</li>
+                <li><strong>The Constant Rule:</strong> If $f(x) = c$ (a constant), then $f'(x) = 0$.</li>
+                <li><strong>The Sum/Difference Rule:</strong> The derivative of a sum or difference is the sum or difference of the derivatives: $(f \pm g)' = f' \pm g'$.</li>
+            </ul>
+        </section>
+
+        <section class="content-block">
+            <h2>The Product and Quotient Rules</h2>
+            <p>For more complex functions, we have:</p>
+            <ul>
+                <li><strong>The Product Rule:</strong> For two functions $f(x)$ and $g(x)$, the derivative of their product is:
+                    <p>$$ (f(x)g(x))' = f'(x)g(x) + f(x)g'(x) $$</p>
+                </li>
+                <li><strong>The Quotient Rule:</strong> The derivative of their quotient is:
+                    <p>$$ \left(\frac{f(x)}{g(x)}\right)' = \frac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2} $$</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="content-block">
+            <h2>The Chain Rule</h2>
+            <p>
+                The Chain Rule is used to differentiate composite functions. If we have a function $h(x) = f(g(x))$, its derivative is:
+            </p>
+            <p>
+                $$ h'(x) = f'(g(x)) \cdot g'(x) $$
+            </p>
+            <p>
+                In words: "the derivative of the outer function (with the inside function unchanged) times the derivative of the inner function."
+            </p>
+        </section>
+        
+        <section class="content-block">
+            <h2>Derivatives of Trigonometric Functions</h2>
+            <p>Key trigonometric derivatives include:</p>
+            <ul>
+                <li>$\frac{d}{dx}(\sin x) = \cos x$</li>
+                <li>$\frac{d}{dx}(\cos x) = -\sin x$</li>
+                <li>$\frac{d}{dx}(\tan x) = \sec^2 x$</li>
+            </ul>
+        </section>
+
+        <section class="content-block">
+            <h2>Implicit Differentiation</h2>
+            <p>
+                When a function is not explicitly written as $y = f(x)$ (e.g., $x^2 + y^2 = 1$), we use implicit differentiation. This involves differentiating both sides of the equation with respect to $x$ and then solving for $\frac{dy}{dx}$. Remember to use the chain rule for terms involving $y$.
+            </p>
+        </section>
+        
+        <section class="content-block">
+            <h2>Higher-Order Derivatives</h2>
+            <p>
+                The <strong>second derivative</strong>, $f''(x)$, is the derivative of the first derivative. It describes the concavity of a function. The <strong>third derivative</strong>, $f'''(x)$, is the derivative of the second derivative, and so on.
+            </p>
+            <ul>
+                <li>If $f''(x) > 0$, the function is concave up.</li>
+                <li>If $f''(x) < 0$, the function is concave down.</li>
+            </ul>
+        </section>
+
+    </main>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>EduProject &copy; 2025 | Licensed under GPL v3+</p>
+</footer>
+
+</body>
+</html>

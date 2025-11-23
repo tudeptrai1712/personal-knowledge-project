@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Median of Grouped Data | Personal Knowledge Project</title>
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+
+    <!-- MathJax Config -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+
+    <!-- MathJax CDN -->
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="nav-inner">
+        <div class="nav-title">EduProject</div>
+        <div class="nav-links">
+            <a href="../../../index.html">Home</a>
+            <a href="../../index.html">Math</a>
+            <a href="../../../physics/index.html">Physics</a>
+            <a href="../../../informatics/index.html">Informatics</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <header class="page-header">
+        <h1>Median of Grouped Data</h1>
+        <p class="subtitle">Finding the middle value in intervals.</p>
+    </header>
+
+    <main>
+
+        <section class="content-block">
+            <h2>What is the Median for Grouped Data?</h2>
+            <p>
+                The <strong>median</strong> is the middle value in an ordered dataset. If you have a list of numbers sorted from smallest to largest, the median is the one exactly in the middle.
+            </p>
+            <p>
+                For <strong>grouped data</strong>, where data is presented in class intervals and frequencies, we cannot find the exact median because we don't know the individual values. Instead, we find an <em>estimated median</em> by locating the class where the median falls and then using a formula to pinpoint its approximate position within that class.
+            </p>
+        </section>
+
+        <section class="content-block">
+            <h2>The Formula</h2>
+            <p>
+                The formula to calculate the estimated median for grouped data is:
+            </p>
+            <p>
+                \[
+                \text{Median} = L + \left( \frac{\frac{N}{2} - F}{f_m} \right) w
+                \]
+            </p>
+            <p>Where:</p>
+            <ul>
+                <li>$L$ = The lower boundary of the median class.</li>
+                <li>$N$ = The total number of observations ($\sum f$).</li>
+                <li>$F$ = The cumulative frequency of the class *before* the median class.</li>
+                <li>$f_m$ = The frequency of the median class itself.</li>
+                <li>$w$ = The width of the median class.</li>
+            </ul>
+        </section>
+
+        <section class="content-block">
+            <h2>How to Calculate the Median for Grouped Data (Step-by-Step)</h2>
+            <p>Let's use an example to walk through the process.</p>
+            <p>Suppose you have the following frequency distribution for student test scores:</p>
+
+            <table class="frequency-table">
+                <thead>
+                    <tr>
+                        <th>Class Interval</th>
+                        <th>Frequency (f)</th>
+                        <th>Cumulative Frequency (F_c)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>55 - 63</td><td>3</td><td>3</td></tr>
+                    <tr><td>64 - 72</td><td>3</td><td>6</td></tr>
+                    <tr><td>73 - 81</td><td>4</td><td>10</td></tr>
+                    <tr><td>82 - 90</td><td>5</td><td>15</td></tr>
+                    <tr><td>91 - 99</td><td>5</td><td>20</td></tr>
+                </tbody>
+            </table>
+            <p>($N = \sum f = 20$)</p>
+
+            <ol>
+                <li>
+                    <strong>Find the Median Position ($N/2$):</strong>
+                    <p>Median Position = $N/2 = 20/2 = 10$</p>
+                    This means the median value is the 10th observation when data is ordered.
+                </li>
+                <li>
+                    <strong>Identify the Median Class:</strong>
+                    Look at the Cumulative Frequency column. The median class is the first class whose cumulative frequency is greater than or equal to the median position (10).
+                    In our example, the class 73 - 81 has a cumulative frequency of 10, so this is our median class.
+                </li>
+                <li>
+                    <strong>Identify the values for the formula ($L, N, F, f_m, w$):</strong>
+                    <ul>
+                        <li>$L$ = Lower boundary of the median class = 73 - 0.5 = 72.5 (Assuming continuous data, subtract 0.5 from the lower limit).</li>
+                        <li>$N$ = Total frequency = 20</li>
+                        <li>$F$ = Cumulative frequency of the class *before* the median class = 6 (the cumulative frequency of 64 - 72).</li>
+                        <li>$f_m$ = Frequency of the median class = 4 (the frequency of 73 - 81).</li>
+                        <li>$w$ = Class width = 9 (Upper limit - Lower limit + 1, e.g., 63 - 55 + 1 = 9. Or 72.5 - 63.5 = 9 for boundaries)</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Apply the Formula:</strong>
+                    <p>
+                        Median = $72.5 + \left( \frac{10 - 6}{4} \right) 9$
+                    </p>
+                    <p>
+                        Median = $72.5 + \left( \frac{4}{4} \right) 9$
+                    </p>
+                    <p>
+                        Median = $72.5 + (1) 9$
+                    </p>
+                    <p>
+                        Median = $72.5 + 9 = 81.5$
+                    </p>
+                </li>
+            </ol>
+            <p>
+                So, the estimated median test score for this grouped data is <strong>81.5</strong>.
+            </p>
+        </section>
+
+        <section class="content-block">
+            <h2>Why "Estimated"?</h2>
+            <p>
+                As with the mean, this median is an estimate. The formula assumes that the data within the median class is evenly distributed. While not exact, it provides a good central tendency measure for grouped data.
+            </p>
+        </section>
+
+    </main>
+</div>
+
+<footer>
+    <p>EduProject © 2025 | GPLv3+</p>
+</footer>
+
+</body>
+</html>

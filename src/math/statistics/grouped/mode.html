@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mode of Grouped Data | Personal Knowledge Project</title>
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+
+    <!-- MathJax Config -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+
+    <!-- MathJax CDN -->
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="nav-inner">
+        <div class="nav-title">EduProject</div>
+        <div class="nav-links">
+            <a href="../../../index.html">Home</a>
+            <a href="../../index.html">Math</a>
+            <a href="../../../physics/index.html">Physics</a>
+            <a href="../../../informatics/index.html">Informatics</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <header class="page-header">
+        <h1>Mode of Grouped Data</h1>
+        <p class="subtitle">Finding the most frequent interval.</p>
+    </header>
+
+    <main>
+
+        <section class="content-block">
+            <h2>What is the Mode for Grouped Data?</h2>
+            <p>
+                The <strong>mode</strong> is the value that appears most often in a dataset. For simple, ungrouped data, you just count which number shows up the most.
+            </p>
+            <p>
+                For <strong>grouped data</strong>, we don't have individual values. Instead, we have class intervals and their frequencies. We can identify a <strong>modal class</strong> (the class with the highest frequency). To get a more precise estimate of the mode within that class, we use a specific formula.
+            </p>
+        </section>
+
+        <section class="content-block">
+            <h2>The Formula</h2>
+            <p>
+                The formula to calculate the estimated mode for grouped data is:
+            </p>
+            <p>
+                \[
+                \text{Mode} = L + \left( \frac{f_m - f_1}{(f_m - f_1) + (f_m - f_2)} \right) w
+                \]
+            </p>
+            <p>Where:</p>
+            <ul>
+                <li>$L$ = The lower boundary of the modal class.</li>
+                <li>$f_m$ = The frequency of the modal class.</li>
+                <li>$f_1$ = The frequency of the class *before* the modal class.</li>
+                <li>$f_2$ = The frequency of the class *after* the modal class.</li>
+                <li>$w$ = The width of the modal class.</li>
+            </ul>
+        </section>
+
+        <section class="content-block">
+            <h2>How to Calculate the Mode for Grouped Data (Step-by-Step)</h2>
+            <p>Let's use an example to walk through the process.</p>
+            <p>Suppose you have the following frequency distribution for student test scores:</p>
+
+            <table class="frequency-table">
+                <thead>
+                    <tr>
+                        <th>Class Interval</th>
+                        <th>Frequency (f)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>55 - 63</td><td>3</td></tr>
+                    <tr><td>64 - 72</td><td>3</td></tr>
+                    <tr><td>73 - 81</td><td>4</td></tr>
+                    <tr><td>82 - 90</td><td>5</td></tr>
+                    <tr><td>91 - 99</td><td>5</td></tr>
+                </tbody>
+            </table>
+
+            <ol>
+                <li>
+                    <strong>Identify the Modal Class:</strong>
+                    This is the class with the highest frequency. In our table, both 82 - 90 and 91 - 99 have a frequency of 5. When there are two classes with the same highest frequency, the distribution is bimodal. For this example, let's pick 82 - 90 as our modal class. (If the highest frequency appears only once, that class is your modal class).
+                </li>
+                <li>
+                    <strong>Identify the values for the formula ($L, f_m, f_1, f_2, w$):</strong>
+                    <ul>
+                        <li>$L$ = Lower boundary of the modal class = 82 - 0.5 = 81.5 (Assuming continuous data, subtract 0.5 from the lower limit).</li>
+                        <li>$f_m$ = Frequency of the modal class (82 - 90) = 5</li>
+                        <li>$f_1$ = Frequency of the class *before* the modal class (73 - 81) = 4</li>
+                        <li>$f_2$ = Frequency of the class *after* the modal class (91 - 99) = 5</li>
+                        <li>$w$ = Class width = 9 (Upper limit - Lower limit + 1, e.g., 63 - 55 + 1 = 9. Or 81.5 - 72.5 = 9 for boundaries)</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Apply the Formula:</strong>
+                    <p>
+                        Mode = $81.5 + \left( \frac{5 - 4}{(5 - 4) + (5 - 5)} \right) 9$
+                    </p>
+                    <p>
+                        Mode = $81.5 + \left( \frac{1}{1 + 0} \right) 9$
+                    </p>
+                    <p>
+                        Mode = $81.5 + (1) 9$
+                    </p>
+                    <p>
+                        Mode = $81.5 + 9 = 90.5$
+                    </p>
+                </li>
+            </ol>
+            <p>
+                So, the estimated mode test score for this grouped data is <strong>90.5</strong>.
+            </p>
+        </section>
+
+        <section class="content-block">
+            <h2>Important Note on Multimodal Distributions</h2>
+            <p>
+                Sometimes, a grouped frequency distribution might have two or more classes with the highest frequency. In such cases, the distribution is considered <strong>bimodal</strong> (two modes) or <strong>multimodal</strong> (multiple modes). Our formula gives the mode for a single modal class. If you have a clear single highest frequency, the formula works directly.
+            </p>
+        </section>
+
+    </main>
+</div>
+
+<footer>
+    <p>EduProject © 2025 | GPLv3+</p>
+</footer>
+
+</body>
+</html>

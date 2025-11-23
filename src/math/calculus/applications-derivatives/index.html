@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Analysis 101 | Personal Knowledge Project</title>
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+
+    <!-- MathJax Config -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+
+    <!-- MathJax CDN -->
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="nav-inner">
+        <div class="nav-title">EduProject</div>
+        <div class="nav-links">
+            <a href="../../../index.html">Home</a>
+            <a href="../../index.html">Math</a>
+            <a href="../../../physics/index.html">Physics</a>
+            <a href="../../../informatics/index.html">Informatics</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <header class="page-header">
+        <h1>Function Analysis 101</h1>
+        <p class="subtitle">Detailed lecture on analyzing functions with interactive practice.</p>
+    </header>
+
+    <main>
+
+        <!-- Detailed Lecture -->
+        <section class="content-block">
+            <h2>1. Understanding Functions</h2>
+            <p>A <strong>function</strong> $f(x)$ is a rule that assigns exactly one output $y$ for each input $x$. To analyze a function, we focus on several key features:</p>
+            <ul>
+                <li><strong>Domain:</strong> All $x$ values where $f(x)$ is defined. Example: $f(x) = \frac{1}{x}$ has domain $x \neq 0$.</li>
+                <li><strong>Range:</strong> All possible outputs. Example: $f(x) = x^2$ has range $y \ge 0$.</li>
+                <li><strong>Asymptotes:</strong> Lines that the graph approaches but never reaches. Can be vertical, horizontal, or oblique.</li>
+                <li><strong>Extremums:</strong> Points where the function reaches local maxima or minima. Often found by solving $f'(x) = 0$.</li>
+            </ul>
+        </section>
+
+        <section class="content-block">
+            <h2>2. Domain and Range</h2>
+            <p>Step-by-step:</p>
+            <ol>
+                <li><strong>Domain:</strong> Look for values where the function is undefined (division by zero, square roots of negative numbers, logarithms of non-positive numbers).</li>
+                <li><strong>Range:</strong> Analyze the outputs by looking at the graph or solving inequalities for $y$ in terms of $x$.</li>
+            </ol>
+            <p><strong>Example:</strong> $f(x) = \sqrt{x-2}$</p>
+            <ul>
+                <li>Domain: $x - 2 \ge 0 \Rightarrow x \ge 2$</li>
+                <li>Range: $y \ge 0$</li>
+            </ul>
+        </section>
+
+        <section class="content-block">
+            <h2>3. Asymptotes</h2>
+            <ul>
+                <li><strong>Vertical asymptotes:</strong> Set denominator = 0. Example: $f(x) = \frac{1}{x-3} \Rightarrow x=3$ is vertical asymptote.</li>
+                <li><strong>Horizontal asymptotes:</strong> Compute $\lim_{x\to\infty} f(x)$ and $\lim_{x\to-\infty} f(x)$. Example: $f(x) = \frac{2x+1}{x-3} \Rightarrow y = 2$.</li>
+                <li><strong>Oblique asymptotes:</strong> Occur when degree numerator = degree denominator + 1. Use polynomial division.</li>
+            </ul>
+        </section>
+
+        <section class="content-block">
+            <h2>4. Extrema</h2>
+            <p>Local maxima and minima occur where the derivative is zero or undefined.</p>
+            <p>Step-by-step:</p>
+            <ol>
+                <li>Compute $f'(x)$.</li>
+                <li>Solve $f'(x) = 0$ for critical points.</li>
+                <li>Check $f''(x)$ or use first derivative test to classify maxima/minima.</li>
+            </ol>
+            <p><strong>Example:</strong> $f(x) = x^2 - 4x + 3$</p>
+            <ul>
+                <li>$f'(x) = 2x - 4 = 0 \Rightarrow x=2$</li>
+                <li>Check second derivative: $f''(x) = 2 > 0 \Rightarrow$ local minimum at $(2, f(2)) = (2, -1)$</li>
+            </ul>
+        </section>
+
+        <!-- GeoGebra Practice -->
+        <section class="content-block">
+            <h2>Interactive Practice</h2>
+            <p>Use the blank GeoGebra calculator below to plot any function, find domain, range, asymptotes, and extrema.</p>
+            <div class="geogebra-container">
+                <iframe 
+                    src="https://www.geogebra.org/calculator" 
+                    title="GeoGebra Calculator" 
+                    width="100%" 
+                    height="500" 
+                    frameborder="0" 
+                    scrolling="no">
+                </iframe>
+            </div>
+        </section>
+
+        <!-- Exercises -->
+        <section class="content-block">
+            <h2>Exercises</h2>
+            <p>Analyze each function using GeoGebra and your lecture notes:</p>
+            <ol>
+                <li>$f(x) = x^3 - 3x^2 + 2$ — find domain, range, and extremums.</li>
+                <li>$f(x) = \frac{x+1}{x-2}$ — find vertical & horizontal asymptotes.</li>
+                <li>$f(x) = \sqrt{x-1}$ — find domain and range.</li>
+                <li>$f(x) = \sin(x)$ — find maxima, minima, and zeros.</li>
+                <li>Choose your own function and identify all key features.</li>
+            </ol>
+        </section>
+
+        <!-- Tips -->
+        <section class="content-block">
+            <h2>Tips</h2>
+            <ul>
+                <li>Always check for undefined points first for domain and vertical asymptotes.</li>
+                <li>Use limits to determine horizontal asymptotes.</li>
+                <li>Derivatives are your main tool for extremums.</li>
+                <li>GeoGebra is your visual check — compare analytical vs graphical findings.</li>
+            </ul>
+        </section>
+
+    </main>
+</div>
+
+<footer>
+    <p>EduProject © 2025 | GPLv3+</p>
+</footer>
+
+<style>
+    /* Responsive GeoGebra container */
+    .geogebra-container {
+        width: 100%;
+        max-width: 100%;
+        height: 500px;
+        margin: 1em 0;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .geogebra-container iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+</style>
+
+</body>
+</html>

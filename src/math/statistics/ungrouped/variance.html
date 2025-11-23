@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variance & Standard Deviation of Ungrouped Data | Personal Knowledge Project</title>
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+
+    <!-- MathJax Config -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+
+    <!-- MathJax CDN -->
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="nav-inner">
+        <div class="nav-title">EduProject</div>
+        <div class="nav-links">
+            <a href="../../../index.html">Home</a>
+            <a href="../../index.html">Math</a>
+            <a href="../../../physics/index.html">Physics</a>
+            <a href="../../../informatics/index.html">Informatics</a>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <header class="page-header">
+        <h1>Variance & Standard Deviation of Ungrouped Data</h1>
+        <p class="subtitle">Measuring the spread of raw (ungrouped) data values.</p>
+    </header>
+
+    <main>
+
+        <section class="content-block">
+            <h2>What Are We Measuring?</h2>
+            <p>
+                For ungrouped data (a simple list of numbers), the idea is exactly the same as for grouped data:
+            </p>
+            <ul>
+                <li><strong>Variance ($s^2$):</strong> The average of the squared deviations from the mean.</li>
+                <li><strong>Standard Deviation ($s$):</strong> The square root of the variance.</li>
+            </ul>
+            <p>
+                These values tell you how spread out your dataset is. A small standard deviation means the numbers stick close to the mean, while a large one means they vary widely.
+            </p>
+        </section>
+
+        <section class="content-block">
+            <h2>The Formulas</h2>
+            
+            <p><strong>Sample Variance:</strong></p>
+            <p>
+                \[
+                s^2 = \frac{\sum (x_i - \bar{x})^2}{n - 1}
+                \]
+            </p>
+
+            <p><strong>Standard Deviation:</strong></p>
+            <p>
+                \[
+                s = \sqrt{s^2}
+                \]
+            </p>
+
+            <p>Where:</p>
+            <ul>
+                <li>$x_i$ = each individual data value</li>
+                <li>$\bar{x}$ = the mean of the data</li>
+                <li>$n$ = number of observations</li>
+                <li>$n - 1$ is used for sample data (most common in statistics classes)</li>
+            </ul>
+        </section>
+
+        <section class="content-block">
+            <h2>Example: Ungrouped Test Scores</h2>
+
+            <p>Suppose we have the following test scores from 10 students:</p>
+
+            <p class="math-display">
+                $72,\ 85,\ 90,\ 68,\ 88,\ 79,\ 94,\ 81,\ 76,\ 73$
+            </p>
+
+            <ol>
+                <li>
+                    <strong>Find the Mean ($\bar{x}$):</strong>
+                    <p>Add up all values:</p>
+                    <p>
+                        $72 + 85 + 90 + 68 + 88 + 79 + 94 + 81 + 76 + 73 = 806$
+                    </p>
+                    <p>Divide by number of data points ($n = 10$):</p>
+                    <p>
+                        $\bar{x} = \frac{806}{10} = 80.6$
+                    </p>
+                </li>
+
+                <li>
+                    <strong>Compute Each Deviation ($x_i - \bar{x}$):</strong>
+                    <ul>
+                        <li>$72 - 80.6 = -8.6$</li>
+                        <li>$85 - 80.6 = 4.4$</li>
+                        <li>$90 - 80.6 = 9.4$</li>
+                        <li>$68 - 80.6 = -12.6$</li>
+                        <li>$88 - 80.6 = 7.4$</li>
+                        <li>$79 - 80.6 = -1.6$</li>
+                        <li>$94 - 80.6 = 13.4$</li>
+                        <li>$81 - 80.6 = 0.4$</li>
+                        <li>$76 - 80.6 = -4.6$</li>
+                        <li>$73 - 80.6 = -7.6$</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <strong>Square Each Deviation:</strong>
+                    <ul>
+                        <li>$(-8.6)^2 = 73.96$</li>
+                        <li>$(4.4)^2 = 19.36$</li>
+                        <li>$(9.4)^2 = 88.36$</li>
+                        <li>$(-12.6)^2 = 158.76$</li>
+                        <li>$(7.4)^2 = 54.76$</li>
+                        <li>$(-1.6)^2 = 2.56$</li>
+                        <li>$(13.4)^2 = 179.56$</li>
+                        <li>$(0.4)^2 = 0.16$</li>
+                        <li>$(-4.6)^2 = 21.16$</li>
+                        <li>$(-7.6)^2 = 57.76$</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <strong>Add All Squared Deviations:</strong>
+                    <p>
+                        $\sum (x_i - \bar{x})^2 = 656.4$
+                    </p>
+                </li>
+
+                <li>
+                    <strong>Compute Sample Variance:</strong>
+                    <p>
+                        $s^2 = \frac{656.4}{10 - 1} = \frac{656.4}{9} \approx 72.93$
+                    </p>
+                </li>
+
+                <li>
+                    <strong>Compute Standard Deviation:</strong>
+                    <p>
+                        $s = \sqrt{72.93} \approx 8.54$
+                    </p>
+                </li>
+            </ol>
+
+            <p>
+                So the sample variance of these test scores is approximately <strong>72.93</strong>, and the standard deviation is about <strong>8.54</strong>. This means, on average, the scores differ from the mean by around 8.5 points.
+            </p>
+
+        </section>
+
+    </main>
+</div>
+
+<footer>
+    <p>EduProject © 2025 | GPLv3+</p>
+</footer>
+
+</body>
+</html>

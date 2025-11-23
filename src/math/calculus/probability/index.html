@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probability | Personal Knowledge Project</title>
+
+    <!-- Project Stylesheet -->
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+
+    <!-- MathJax Configuration -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            },
+            options: {
+                enableMenu: false
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+
+    <!-- MathJax CDN -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="nav-inner">
+        <h2>EduProject</h2>
+        <div>
+            <a href="../../../index.html">Home</a>
+            <a href="../../index.html">Math</a>
+            <a href="../../../physics/index.html">Physics</a>
+            <a href="../../../informatics/index.html">Informatics</a>
+        </div>
+    </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+    <header class="page-header">
+        <h1>An Introduction to Probability</h1>
+        <p class="subtitle">From basic concepts to calculus-based probability.</p>
+    </header>
+
+    <main>
+        <section class="content-block">
+            <h2>The Basics of Probability</h2>
+            <p>
+                Probability is the measure of the likelihood that an event will occur. It is quantified as a number between 0 and 1, where 0 indicates impossibility and 1 indicates certainty.
+            </p>
+            <ul>
+                <li><strong>Experiment:</strong> An action or process with an uncertain outcome (e.g., flipping a coin).</li>
+                <li><strong>Sample Space (S):</strong> The set of all possible outcomes of an experiment.</li>
+                <li><strong>Event (E):</strong> A subset of the sample space.</li>
+            </ul>
+            <p>The probability of an event E is given by:</p>
+            <p>
+                $$ P(E) = \frac{\text{Number of favorable outcomes}}{\text{Total number of outcomes in the sample space}} $$
+            </p>
+        </section>
+
+        <section class="content-block">
+            <h2>Key Probability Rules</h2>
+            <ul>
+                <li><strong>Complement Rule:</strong> The probability that an event does not occur is $1$ minus the probability that it does. $P(\text{not } A) = 1 - P(A)$.</li>
+                <li><strong>Addition Rule (Mutually Exclusive Events):</strong> If two events $A$ and $B$ cannot happen at the same time, the probability of $A$ or $B$ is $P(A \text{ or } B) = P(A) + P(B)$.</li>
+                <li><strong>Addition Rule (General):</strong> For any two events, $P(A \text{ or } B) = P(A) + P(B) - P(A \text{ and } B)$.</li>
+            </ul>
+        </section>
+
+        <section class="content-block">
+            <h2>Conditional Probability and Independence</h2>
+            <p>
+                <strong>Conditional probability</strong> is the probability of an event occurring, given that another event has already occurred. It is denoted $P(A|B)$, the probability of $A$ given $B$.
+            </p>
+            <p>
+                $$ P(A|B) = \frac{P(A \text{ and } B)}{P(B)} $$
+            </p>
+            <p>
+                Two events are <strong>independent</strong> if the occurrence of one does not affect the probability of the other. For independent events, $P(A \text{ and } B) = P(A) \cdot P(B)$.
+            </p>
+        </section>
+
+        <section class="content-block">
+            <h2>Discrete vs. Continuous Random Variables</h2>
+            <p>
+                A <strong>random variable</strong> is a variable whose value is a numerical outcome of a random phenomenon.
+            </p>
+            <ul>
+                <li><strong>Discrete Random Variables:</strong> Have a finite or countable number of possible values (e.g., the roll of a die). Probabilities are given by a probability mass function.</li>
+                <li><strong>Continuous Random Variables:</strong> Can take any value in a given range (e.g., the height of a person). Probabilities are found using a probability density function (PDF).</li>
+            </ul>
+        </section>
+        
+        <section class="content-block">
+            <h2>Probability Density Functions (PDF) and Calculus</h2>
+            <p>
+                For a continuous random variable, the probability of it falling within a certain range is found by integrating its <strong>Probability Density Function (PDF)</strong>, $f(x)$. A valid PDF must satisfy $f(x) \ge 0$ for all $x$, and its total integral must be 1:
+            </p>
+            <p>
+                $$ \int_{-\infty}^{\infty} f(x) \,dx = 1 $$
+            </p>
+            <p>
+                The probability that the variable falls between $a$ and $b$ is the area under the curve of the PDF in that interval:
+            </p>
+            <p>
+                $$ P(a \le X \le b) = \int_{a}^{b} f(x) \,dx $$
+            </p>
+        </section>
+
+        <section class="content-block">
+            <h2>Expected Value</h2>
+            <p>
+                The <strong>expected value</strong>, $E[X]$, is the long-run average value of a random variable. It's a weighted average of the possible outcomes.
+            </p>
+            <ul>
+                <li>For a <strong>discrete</strong> variable with outcomes $x_i$ and probabilities $P(x_i)$: $E[X] = \sum x_i P(x_i)$.</li>
+                <li>For a <strong>continuous</strong> variable with PDF $f(x)$: $E[X] = \int_{-\infty}^{\infty} x f(x) \,dx$.</li>
+            </ul>
+        </section>
+
+    </main>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>EduProject &copy; 2025 | Licensed under GPL v3+</p>
+</footer>
+
+</body>
+</html>
