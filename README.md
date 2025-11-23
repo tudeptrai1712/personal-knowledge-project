@@ -3,6 +3,14 @@
 This project is a personal educational website designed to provide clear, rigorous, and accessible learning materials on mathematics, physics, and informatics. It was developed with the assistance of an AI, and this document outlines both the ethical considerations of that process and how the project's structure is designed to support learners with difficulties.
 
 ---
+## Table of Contents
+
+- [Open Source and Free as in Freedom](#open-source-and-free-as-in-freedom)
+- [The Ethics of AI in Development](#the-ethics-of-ai-in-development)
+- [How This Project Helps with Learning Difficulties](#how-this-project-helps-with-learning-difficulties)
+- [Deployment](#deployment)
+
+---
 
 ## Open Source and Free as in Freedom
 
@@ -41,6 +49,65 @@ Static text and images are not always enough. This project uses interactive tool
 Each page is organized into small, distinct sections with clear headings. This breaks down complex topics into manageable chunks, making it easier to process and retain information without feeling overwhelmed.
 
 ### 4. Accessible Foundation
-The project is built with clean, semantic HTML and modern CSS. This provides a strong foundation for accessibility tools like screen readers and ensures that the content is available to the widest possible audience.
+The project is built with clean, semantic HTML and modern CSS. This provides a strong foundation for accessibility tools like screen readers and ensures that the acontent is available to the widest possible audience.
 
 By combining AI as an ethical development partner and a thoughtful, user-centric design, this project aims to be a welcoming and effective space for all learners.
+
+---
+## Deployment
+
+This website is designed to be deployed as a containerized application using Docker or Podman.
+
+### Prerequisites
+
+- [Docker](https://docs.docker.com/get-docker/) or [Podman](https://podman.io/getting-started/installation) installed on your machine.
+
+### Building the Image
+
+1.  Clone this repository to your local machine.
+2.  Navigate to the root directory of the project.
+3.  Build the container image using the following command:
+
+    ```bash
+    docker build -t personal-knowledge-project .
+    ```
+    or for Podman users:
+    ```bash
+    podman build -t personal-knowledge-project .
+    ```
+
+### Running the Container
+
+Once the image is built, you can run it as a container.
+
+```bash
+docker run -d -p 8080:80 --name personal-knowledge-project personal-knowledge-project
+```
+or for Podman users:
+```bash
+podman run -d -p 8080:80 --name personal-knowledge-project personal-knowledge-project
+```
+This command will:
+- `-d`: Run the container in detached mode (in the background).
+- `-p 8080:80`: Map port 8080 on your host machine to port 80 inside the container.
+- `--name personal-knowledge-project`: Assign a name to the container for easy reference.
+
+You can now access the website by navigating to `http://localhost:8080` in your web browser.
+
+### Stopping and Starting the Container
+
+- To **stop** the container:
+  ```bash
+  docker stop personal-knowledge-project
+  podman stop personal-knowledge-project
+  ```
+- To **start** the container again:
+  ```bash
+  docker start personal-knowledge-project
+  podman start personal-knowledge-project
+  ```
+- To **remove** the container:
+  ```bash
+  docker rm personal-knowledge-project
+  podman rm personal-knowledge-project
+  ```
