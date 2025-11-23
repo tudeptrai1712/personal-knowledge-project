@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrals 101 | Personal Knowledge Project</title>
+
+    <!-- Project Stylesheet -->
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+
+    <!-- MathJax Configuration -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            },
+            options: {
+                enableMenu: false
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+
+    <!-- MathJax CDN -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="nav-inner">
+        <h2>EduProject</h2>
+        <div>
+            <a href="../../../index.html">Home</a>
+            <a href="../../index.html">Math</a>
+            <a href="../../../physics/index.html">Physics</a>
+            <a href="../../../informatics/index.html">Informatics</a>
+        </div>
+    </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+    <header class="page-header">
+        <h1>Integrals 101: The Complete Guide</h1>
+        <p class="subtitle">An AP-level overview of integrals in calculus.</p>
+    </header>
+
+    <main>
+        <section class="content-block">
+            <h2>What is an Integral?</h2>
+            <p>
+                The integral is the second fundamental concept of calculus. It can be understood in two main ways: as an <strong>indefinite integral</strong>, which represents the reverse process of differentiation (an antiderivative), and as a <strong>definite integral</strong>, which represents the accumulated area under the curve of a function between two points.
+            </p>
+        </section>
+
+        <section class="content-block">
+            <h2>Indefinite Integrals and Antiderivatives</h2>
+            <p>
+                An antiderivative of a function $f(x)$ is a function $F(x)$ whose derivative is $f(x)$. That is, $F'(x) = f(x)$. The indefinite integral is the family of all antiderivatives of $f(x)$, written as:
+            </p>
+            <p>
+                $$ \int f(x) \,dx = F(x) + C $$
+            </p>
+            <p>
+                The $C$ is the <strong>constant of integration</strong>, which is necessary because the derivative of any constant is zero. For example, since the derivative of $x^2$ is $2x$, the indefinite integral of $2x$ is $\int 2x \,dx = x^2 + C$.
+            </p>
+        </section>
+
+        <section class="content-block">
+            <h2>The Definite Integral</h2>
+            <p>
+                The definite integral of a function $f(x)$ from $a$ to $b$ is the net area under the curve of $f(x)$ between these two points. It is written as:
+            </p>
+            <p>
+                $$ \int_{a}^{b} f(x) \,dx $$
+            </p>
+            <p>
+                Conceptually, this is the limit of a sum of the areas of an infinite number of rectangles (a Riemann Sum) under the curve.
+            </p>
+        </section>
+
+        <section class="content-block">
+            <h2>The Fundamental Theorem of Calculus</h2>
+            <p>This theorem links the concepts of differentiation and integration.</p>
+            <ul>
+                <li><strong>Part 1:</strong> If $g(x) = \int_{a}^{x} f(t) \,dt$, then $g'(x) = f(x)$. This means the derivative of an integral function is the original function.</li>
+                <li><strong>Part 2:</strong> If $F$ is an antiderivative of $f$ (i.e., $F' = f$), then the definite integral can be easily evaluated:
+                    <p>$$ \int_{a}^{b} f(x) \,dx = F(b) - F(a) $$</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="content-block">
+            <h2>Basic Integration Rules</h2>
+            <p>Many integration rules are the reverse of differentiation rules.</p>
+            <ul>
+                <li><strong>Reverse Power Rule:</strong> $\int x^n \,dx = \frac{x^{n+1}}{n+1} + C$ (for $n \neq -1$).</li>
+                <li><strong>Constant Rule:</strong> $\int k \,dx = kx + C$.</li>
+                <li><strong>Sum/Difference Rule:</strong> $\int (f(x) \pm g(x)) \,dx = \int f(x) \,dx \pm \int g(x) \,dx$.</li>
+                <li><strong>Special Integrals:</strong> $\int \frac{1}{x} \,dx = \ln|x| + C$, and $\int e^x \,dx = e^x + C$.</li>
+            </ul>
+        </section>
+        
+        <section class="content-block">
+            <h2>Technique: u-Substitution</h2>
+            <p>
+                U-substitution is the reverse of the chain rule and is a powerful technique for simplifying integrals. The goal is to substitute part of the integrand with a variable $u$ to make it look like one of the basic integral forms.
+            </p>
+            <p>
+                If we have an integral of the form $\int f(g(x))g'(x) \,dx$, we can let $u = g(x)$, which means $du = g'(x) \,dx$. The integral becomes a much simpler:
+            </p>
+            <p>
+                $$ \int f(u) \,du $$
+            </p>
+        </section>
+
+        <section class="content-block">
+            <h2>Applications of Integration</h2>
+            <p>
+                Integration has numerous applications beyond finding area, including:
+            </p>
+            <ul>
+                <li>Calculating the area between two curves.</li>
+                <li>Finding the volume of solids of revolution (e.g., using the disk or washer method).</li>
+                <li>Determining the average value of a function over an interval.</li>
+                <li>Solving separable differential equations.</li>
+            </ul>
+        </section>
+
+    </main>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>EduProject &copy; 2025 | Licensed under GPL v3+</p>
+</footer>
+
+</body>
+</html>

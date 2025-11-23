@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antiderivatives | Personal Knowledge Project</title>
+
+    <!-- Project Stylesheet -->
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+
+    <!-- MathJax Configuration -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            },
+            options: {
+                enableMenu: false
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+
+    <!-- MathJax CDN -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="nav-inner">
+        <h2>EduProject</h2>
+        <div>
+            <a href="../../../index.html">Home</a>
+            <a href="../../index.html">Math</a>
+            <a href="../../../physics/index.html">Physics</a>
+            <a href="../../../informatics/index.html">Informatics</a>
+        </div>
+    </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+    <header class="page-header">
+        <h1>Antiderivatives</h1>
+        <p class="subtitle">Understanding the reverse process of differentiation.</p>
+    </header>
+
+    <main>
+        <section class="content-block">
+            <h2>Definition of an Antiderivative</h2>
+            <p>
+                A function $F$ is called an <strong>antiderivative</strong> of a function $f$ on an interval $I$ if $F'(x) = f(x)$ for all $x$ in $I$.
+            </p>
+            <p>
+                For example, if $f(x) = 2x$, then $F(x) = x^2$ is an antiderivative of $f(x)$ because the derivative of $x^2$ is $2x$.
+            </p>
+            <p>
+                Note that if $F(x)$ is an antiderivative of $f(x)$, then so is $F(x) + C$ for any constant $C$. This is because the derivative of a constant is zero. We call $C$ the <strong>constant of integration</strong>. The general form of the antiderivative of $f$ is $F(x) + C$.
+            </p>
+        </section>
+
+        <section class="content-block">
+            <h2>The Indefinite Integral</h2>
+            <p>
+                The set of all antiderivatives of a function $f(x)$ is called the <strong>indefinite integral</strong> of $f(x)$ and is denoted by:
+                $$ \int f(x) \,dx = F(x) + C $$
+                Here, $\int$ is the integral symbol, $f(x)$ is the integrand, and $dx$ indicates that the variable of integration is $x$.
+            </p>
+        </section>
+
+        <section class="content-block">
+            <h2>Basic Integration Rules</h2>
+            <p>Just as with differentiation, there are several rules to help us find antiderivatives.</p>
+            <ul class="formula-list">
+                <li><strong>Power Rule:</strong> $\int x^n \,dx = \frac{x^{n+1}}{n+1} + C$, for $n \neq -1$</li>
+                <li><strong>Constant Rule:</strong> $\int k \,dx = kx + C$</li>
+                <li><strong>Constant Multiple Rule:</strong> $\int k f(x) \,dx = k \int f(x) \,dx$</li>
+                <li><strong>Sum/Difference Rule:</strong> $\int [f(x) \pm g(x)] \,dx = \int f(x) \,dx \pm \int g(x) \,dx$</li>
+                <li><strong>Exponential Functions:</strong>
+                    <ul>
+                        <li>$\int e^x \,dx = e^x + C$</li>
+                        <li>$\int a^x \,dx = \frac{a^x}{\ln a} + C$</li>
+                    </ul>
+                </li>
+                <li><strong>Logarithmic Function:</strong> $\int \frac{1}{x} \,dx = \ln|x| + C$</li>
+                <li><strong>Trigonometric Functions:</strong>
+                    <ul>
+                        <li>$\int \sin(x) \,dx = -\cos(x) + C$</li>
+                        <li>$\int \cos(x) \,dx = \sin(x) + C$</li>
+                        <li>$\int \sec^2(x) \,dx = \tan(x) + C$</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section class="content-block">
+            <h2>Example</h2>
+            <p>
+                Find the indefinite integral of $f(x) = 3x^2 + 4x - 5$.
+            </p>
+            <p>
+                Using the rules above, we can integrate term by term:
+                $$ \int (3x^2 + 4x - 5) \,dx = \int 3x^2 \,dx + \int 4x \,dx - \int 5 \,dx $$
+                $$ = 3 \int x^2 \,dx + 4 \int x \,dx - 5 \int 1 \,dx $$
+                $$ = 3 \left(\frac{x^3}{3}\right) + 4 \left(\frac{x^2}{2}\right) - 5(x) + C $$
+                $$ = x^3 + 2x^2 - 5x + C $$
+                Therefore, the general antiderivative of $f(x) = 3x^2 + 4x - 5$ is $F(x) = x^3 + 2x^2 - 5x + C$.
+            </p>
+        </section>
+    </main>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>EduProject &copy; 2025 | Licensed under GPL v3+</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinatorics | Personal Knowledge Project</title>
+
+    <!-- Project Stylesheet -->
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+
+    <!-- MathJax Configuration -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            },
+            options: {
+                enableMenu: false
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+
+    <!-- MathJax CDN -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="nav-inner">
+        <h2>EduProject</h2>
+        <div>
+            <a href="../../../index.html">Home</a>
+            <a href="../../index.html">Math</a>
+            <a href="../../../physics/index.html">Physics</a>
+            <a href="../../../informatics/index.html">Informatics</a>
+        </div>
+    </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+    <header class="page-header">
+        <h1>Combinatorics</h1>
+        <p class="subtitle">The art of counting and arrangement.</p>
+    </header>
+
+    <main>
+        <section class="content-block">
+            <h2>Introduction to Combinatorics</h2>
+            <p>
+                Combinatorics is a field of mathematics primarily concerned with counting, both as a means and an end in obtaining results, and certain properties of finite structures. It is closely related to many other areas of mathematics and has many applications in computer science, statistical physics, and other fields.
+            </p>
+        </section>
+
+        <section class="content-block">
+            <h2>Permutations</h2>
+            <p>
+                A <strong>permutation</strong> is an arrangement of objects in a specific order. When selecting $k$ objects from a set of $n$ distinct objects, the number of possible permutations (where order matters) is given by the formula:
+            </p>
+            <p>
+                $$ P(n, k) = \frac{n!}{(n-k)!} $$
+            </p>
+            <p>
+                where $n!$ (n-factorial) is the product of all positive integers up to $n$. For example, the number of ways to arrange 3 books from a set of 5 is $P(5, 3) = \frac{5!}{2!} = 60$.
+            </p>
+        </section>
+
+        <section class="content-block">
+            <h2>Combinations</h2>
+            <p>
+                A <strong>combination</strong> is a selection of objects from a set where the order of selection does not matter. The number of combinations of $k$ objects from a set of $n$ distinct objects is given by the binomial coefficient:
+            </p>
+            <p>
+                $$ C(n, k) = \binom{n}{k} = \frac{n!}{k!(n-k)!} $$
+            </p>
+            <p>
+                For example, the number of ways to choose a committee of 3 people from a group of 5 is $C(5, 3) = \frac{5!}{3!2!} = 10$.
+            </p>
+        </section>
+
+        <section class="content-block">
+            <h2>The Binomial Theorem</h2>
+            <p>
+                The binomial theorem provides a formula for the expansion of $(x+y)^n$ for any non-negative integer $n$. It shows a direct link between combinatorics and algebra.
+            </p>
+            <p>The theorem states:</p>
+            <p>
+                $$ (x+y)^n = \sum_{k=0}^{n} \binom{n}{k} x^{n-k} y^k $$
+            </p>
+            <p>
+                The coefficients $\binom{n}{k}$ are the same combination numbers we saw earlier, and they can be found in Pascal's Triangle. This theorem is fundamental in probability theory, calculus, and many other areas.
+            </p>
+        </section>
+
+    </main>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>EduProject &copy; 2025 | Licensed under GPL v3+</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trigonometry for Calculus | Personal Knowledge Project</title>
+
+    <!-- Project Stylesheet -->
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+
+    <!-- MathJax Configuration -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            },
+            options: {
+                enableMenu: false
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+
+    <!-- MathJax CDN -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="nav-inner">
+        <h2>EduProject</h2>
+        <div>
+            <a href="../../../index.html">Home</a>
+            <a href="../../index.html">Math</a>
+            <a href="../../../physics/index.html">Physics</a>
+            <a href="../../../informatics/index.html">Informatics</a>
+        </div>
+    </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+    <header class="page-header">
+        <h1>Trigonometry for Calculus</h1>
+        <p class="subtitle">A review of the essential trigonometric concepts for calculus.</p>
+    </header>
+
+    <main>
+        <section class="content-block">
+            <h2>The Unit Circle and Radians</h2>
+            <p>
+                A strong foundation in trigonometry begins with the <strong>unit circle</strong>, a circle with radius 1 centered at the origin. For any point $(x, y)$ on the unit circle, the angle $\theta$ (measured in radians) determines the values $\cos(\theta) = x$ and $\sin(\theta) = y$. Using radians is standard in calculus.
+            </p>
+        </section>
+
+        <section class="content-block">
+            <h2>Key Trigonometric Identities</h2>
+            <p>Identities are crucial for simplifying expressions before differentiation or integration.</p>
+            <ul>
+                <li><strong>Pythagorean Identity:</strong> $\sin^2(x) + \cos^2(x) = 1$. Variants include $1 + \tan^2(x) = \sec^2(x)$ and $1 + \cot^2(x) = \csc^2(x)$.</li>
+                <li><strong>Double Angle Identities:</strong> These are very useful in integration.
+                    <ul>
+                        <li>$\sin(2x) = 2\sin(x)\cos(x)$</li>
+                        <li>$\cos(2x) = \cos^2(x) - \sin^2(x) = 2\cos^2(x) - 1 = 1 - 2\sin^2(x)$</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section class="content-block">
+            <h2>Derivatives of Trigonometric Functions</h2>
+            <p>The derivatives of the six basic trigonometric functions are fundamental to calculus:</p>
+            <ul>
+                <li>$\frac{d}{dx}(\sin x) = \cos x$</li>
+                <li>$\frac{d}{dx}(\cos x) = -\sin x$</li>
+                <li>$\frac{d}{dx}(\tan x) = \sec^2 x$</li>
+                <li>$\frac{d}{dx}(\csc x) = -\csc x \cot x$</li>
+                <li>$\frac{d}{dx}(\sec x) = \sec x \tan x$</li>
+                <li>$\frac{d}{dx}(\cot x) = -\csc^2 x$</li>
+            </ul>
+        </section>
+
+        <section class="content-block">
+            <h2>Integrals of Trigonometric Functions</h2>
+            <p>Reversing the derivative rules gives us the basic integrals:</p>
+            <ul>
+                <li>$\int \cos x \,dx = \sin x + C$</li>
+                <li>$\int \sin x \,dx = -\cos x + C$</li>
+                <li>$\int \sec^2 x \,dx = \tan x + C$</li>
+            </ul>
+            <p>More complex integrals often require using identities. For example, to integrate $\cos^2(x)$, we use the identity $\cos^2(x) = \frac{1 + \cos(2x)}{2}$.</p>
+        </section>
+
+        <section class="content-block">
+            <h2>Inverse Trigonometric Functions</h2>
+            <p>
+                Inverse trigonometric functions "undo" the trigonometric functions, but with restricted domains. For example, $y = \arcsin(x)$ gives the angle whose sine is $x$. Their derivatives are important algebraic functions:
+            </p>
+            <ul>
+                <li>$\frac{d}{dx}(\arcsin u) = \frac{1}{\sqrt{1-u^2}}\frac{du}{dx}$</li>
+                <li>$\frac{d}{dx}(\arccos u) = -\frac{1}{\sqrt{1-u^2}}\frac{du}{dx}$</li>
+                <li>$\frac{d}{dx}(\arctan u) = \frac{1}{1+u^2}\frac{du}{dx}$</li>
+            </ul>
+        </section>
+
+    </main>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>EduProject &copy; 2025 | Licensed under GPL v3+</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applications of Derivatives | Personal Knowledge Project</title>
+
+    <!-- Project Stylesheet -->
+    <link rel="stylesheet" href="../../../assets/css/style.css">
+
+    <!-- MathJax Configuration -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            },
+            options: {
+                enableMenu: false
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+
+    <!-- MathJax CDN -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+    <!-- GeoGebra Loader -->
+    <script src="../../../assets/js/geogebra-loader.js"></script>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="nav-inner">
+        <h2>EduProject</h2>
+        <div>
+            <a href="../../../index.html">Home</a>
+            <a href="../../index.html">Math</a>
+            <a href="../../../physics/index.html">Physics</a>
+            <a href="../../../informatics/index.html">Informatics</a>
+        </div>
+    </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+    <header class="page-header">
+        <h1>Applications of Derivatives</h1>
+        <p class="subtitle">Using derivatives to analyze function behavior.</p>
+    </header>
+
+    <main>
+        <section class="content-block">
+            <h2>Analyzing Function Behavior</h2>
+            <p>
+                Derivatives are a fundamental tool in calculus for analyzing the behavior of functions. By examining the first and second derivatives of a function, we can determine where it is increasing or decreasing, find local maximum and minimum values, and identify intervals of concavity and points of inflection.
+            </p>
+        </section>
+
+        <section class="content-block">
+            <h2>Critical Points and Intervals of Increase/Decrease</h2>
+            <p>
+                A <strong>critical point</strong> of a function $f$ is a point $(c, f(c))$ in the domain of $f$ where either $f'(c) = 0$ or $f'(c)$ is undefined. These points are candidates for local extrema.
+            </p>
+            <p>The <strong>First Derivative Test</strong> helps us determine the intervals where a function is increasing or decreasing:</p>
+            <ul>
+                <li>If $f'(x) > 0$ on an interval, then $f$ is <strong>increasing</strong> on that interval.</li>
+                <li>If $f'(x) < 0$ on an interval, then $f$ is <strong>decreasing</strong> on that interval.</li>
+            </ul>
+        </section>
+
+        <section class="content-block">
+            <h2>Local Maxima and Minima</h2>
+            <p>
+                The First Derivative Test can also be used to classify critical points as local maxima or minima:
+            </p>
+            <ul>
+                <li>A critical point is a <strong>local maximum</strong> if the function changes from increasing to decreasing at that point.</li>
+                <li>A critical point is a <strong>local minimum</strong> if the function changes from decreasing to increasing at that point.</li>
+            </ul>
+        </section>
+
+        <section class="content-block">
+            <h2>Concavity and Points of Inflection</h2>
+            <p>
+                The second derivative, $f''(x)$, tells us about the concavity of the function $f(x)$.
+            </p>
+            <ul>
+                <li>If $f''(x) > 0$ on an interval, then $f$ is <strong>concave up</strong> on that interval (like a cup).</li>
+                <li>If $f''(x) < 0$ on an interval, then $f$ is <strong>concave down</strong> on that interval (like a frown).</li>
+            </ul>
+            <p>
+                A <strong>point of inflection</strong> is a point on the curve where the concavity changes. These occur where $f''(x) = 0$ or is undefined.
+            </p>
+        </section>
+
+        <section class="content-block">
+            <h2>Interactive Function Analysis with GeoGebra</h2>
+            <iframe
+                src="https://www.geogebra.org/classic"
+                class="sim-frame">
+            </iframe>
+        </section>
+
+    </main>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>EduProject &copy; 2025 | Licensed under GPL v3+</p>
+</footer>
+
+</body>
+</html>
