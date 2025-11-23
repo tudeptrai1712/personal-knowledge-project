@@ -4,34 +4,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Geometry | Personal Knowledge Project</title>
-    <link rel="stylesheet" href="../../assets/css/style.css">
+
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- MathJax Configuration -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+
+    <!-- MathJax CDN -->
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </head>
+
 <body>
 
-<!-- NAVIGATION -->
-<nav>
+<!-- Navigation -->
+<nav class="navbar">
     <div class="nav-inner">
-        <h2>EduProject</h2>
-        <div>
-            <a href="../../index.html">Home</a>
-            <a href="../index.html">Math</a>
-            <a href="../../physics/index.html">Physics</a>
-            <a href="../../informatics/index.html">Informatics</a>
+        <div class="nav-title">EduProject</div>
+        <div class="nav-links">
+            <a href="../index.html">Home</a>
+            <a href="../math/index.html">Math</a>
+            <a href="../physics/index.html">Physics</a>
+            <a href="../informatics/index.html">Informatics</a>
         </div>
     </div>
 </nav>
 
-<!-- MAIN CONTENT -->
 <div class="container">
+
     <header class="page-header">
         <h1>Geometry</h1>
-        <p class="subtitle">Content coming soon.</p>
+        <p class="subtitle">High school geometry: spatial geometry, coordinate methods, and vectors.</p>
     </header>
+
+    <main>
+
+        <!-- Grade 11 -->
+        <section class="content-block">
+            <h2>Grade 11</h2>
+            <h3>Topics</h3>
+            <ul class="chapter-list">
+                <li><a href="spatial-geometry/index.html">Spatial Geometry</a></li>
+                <li><a href="coordinate-methods/index.html">Coordinate Geometry Methods</a></li>
+            </ul>
+        </section>
+
+        <!-- Grade 12 -->
+        <section class="content-block">
+            <h2>Grade 12</h2>
+            <h3>Topics</h3>
+            <ul class="chapter-list">
+                <li><a href="3d-coordinate-methods/index.html">Coordinate Methods in 3D Space</a></li>
+                <li><a href="vectors/index.html">Vectors</a></li>
+            </ul>
+        </section>
+
+    </main>
+
 </div>
 
-<!-- FOOTER -->
 <footer>
-    <p>EduProject &copy; 2025 | Licensed under GPL v3+</p>
+    <p>EduProject © 2025 | GPLv3+</p>
 </footer>
 
 </body>
