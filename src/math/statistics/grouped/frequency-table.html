@@ -21,10 +21,8 @@
     <!-- MathJax CDN -->
     <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </head>
-
 <body>
 
-<!-- Navigation -->
 <nav class="navbar">
     <div class="nav-inner">
         <div class="nav-title">EduProject</div>
@@ -48,135 +46,58 @@
 
         <section class="content-block">
             <h2>What is a Frequency Table?</h2>
-            <p>
-                Imagine you have collected a lot of data, like the test scores of 100 students.
-                Looking at a long list of numbers can be confusing and hard to understand.
-                A <strong>frequency table</strong> helps us organize this data by showing how often each value, or a range of values, appears.
-            </p>
-            <p>
-                For <strong>grouped data</strong>, instead of listing every single score, we group scores into "classes" or "intervals." This is especially useful when dealing with continuous data or a very wide range of discrete values.
-            </p>
+            <p>A <strong>frequency table</strong> summarizes how often each value or range of values occurs in a dataset. Grouped data uses intervals (classes) to simplify large or continuous datasets.</p>
         </section>
 
         <section class="content-block">
             <h2>Key Components of a Grouped Frequency Table</h2>
-            <p>A typical grouped frequency table includes:</p>
             <ul>
-                <li><strong>Class Intervals:</strong> These are the ranges into which the data is grouped (e.g., 60-69, 70-79).</li>
-                <li><strong>Frequency (f):</strong> The number of data points that fall within each class interval.</li>
-                <li><strong>Relative Frequency:</strong> The proportion of the total data that falls into each class. It's calculated as (Class Frequency / Total Number of Data Points). Often expressed as a decimal or percentage.</li>
-                <li><strong>Cumulative Frequency:</strong> The running total of frequencies. It shows how many data points are below the upper limit of a given class.</li>
-                <li><strong>Class Mark (Midpoint):</strong> The middle value of a class interval. It's calculated as (Lower Limit + Upper Limit) / 2. Useful for calculations like the mean of grouped data.</li>
+                <li><strong>Class Intervals:</strong> Ranges like 60-69, 70-79.</li>
+                <li><strong>Frequency (f):</strong> Count of data points in each class.</li>
+                <li><strong>Relative Frequency:</strong> Proportion of total data: $f / n$.</li>
+                <li><strong>Cumulative Frequency:</strong> Running total of frequencies.</li>
+                <li><strong>Class Mark (Midpoint):</strong> Middle of interval: $(Lower + Upper)/2$.</li>
             </ul>
         </section>
 
         <section class="content-block">
-            <h2>How to Construct a Grouped Frequency Table (Step-by-Step)</h2>
-            <p>Let's say we have a dataset of student test scores ranging from 55 to 98.</p>
+            <h2>Constructing a Grouped Frequency Table</h2>
             <ol>
-                <li>
-                    <strong>Determine the Range of the Data:</strong>
-                    The range is the difference between the highest and lowest values.
-                    <p>Range = Maximum Value - Minimum Value</p>
-                </li>
-                <li>
-                    <strong>Decide on the Number of Classes (k):</strong>
-                    There's no strict rule, but usually between 5 and 20 classes. Too few can hide details, too many can be overwhelming.
-                    A common guideline is to use $k \approx \sqrt{n}$, where $n$ is the total number of data points.
-                </li>
-                <li>
-                    <strong>Calculate the Class Width (w):</strong>
-                    This determines the size of each interval. Always round up to ensure all data is covered.
-                    <p>Class Width (w) = Range / Number of Classes (k)</p>
-                </li>
-                <li>
-                    <strong>Establish Class Limits:</strong>
-                    Start with the minimum value or a convenient number slightly below it for the first lower class limit. Add the class width to find the lower limit of the next class, and so on.
-                    Make sure classes are mutually exclusive (no overlaps) and exhaustive (cover all data).
-                </li>
-                <li>
-                    <strong>Tally the Frequencies:</strong>
-                    Go through your raw data and count how many observations fall into each class interval.
-                </li>
-                <li>
-                    <strong>Calculate Relative and Cumulative Frequencies (Optional):</strong>
-                    Once frequencies are tallied, you can easily compute the relative and cumulative frequencies.
-                </li>
+                <li>Calculate the <strong>range</strong>: Max - Min.</li>
+                <li>Decide <strong>number of classes</strong> $k$ (usually $\approx \sqrt{n}$).</li>
+                <li>Compute <strong>class width</strong>: $w = \text{Range}/k$ (round up).</li>
+                <li>Set <strong>class limits</strong>: Ensure classes are mutually exclusive and exhaustive.</li>
+                <li>Tally <strong>frequencies</strong>.</li>
+                <li>Optionally, calculate <strong>relative and cumulative frequencies</strong>.</li>
             </ol>
         </section>
 
         <section class="content-block">
             <h2>Example: Student Test Scores</h2>
-            <p>Suppose we have the following 20 test scores:</p>
-            <p class="data-list">
-                55, 60, 63, 67, 70, 72, 75, 78, 80, 81, 83, 85, 87, 88, 90, 92, 95, 96, 97, 98
-            </p>
-            <p>Let's construct a frequency table with 5 classes:</p>
-            <ol>
-                <li><strong>Range:</strong> $98 - 55 = 43$</li>
-                <li><strong>Number of Classes (k):</strong> 5 (given)</li>
-                <li><strong>Class Width (w):</strong> $43 / 5 = 8.6 \rightarrow$ round up to 9</li>
-            </ol>
-            <p>Now, let's create the table:</p>
+            <p>Dataset (20 scores): 55, 60, 63, 67, 70, 72, 75, 78, 80, 81, 83, 85, 87, 88, 90, 92, 95, 96, 97, 98</p>
+            <p>Constructing a table with 5 classes:</p>
             <table class="frequency-table">
                 <thead>
                     <tr>
                         <th>Class Interval</th>
-                        <th>Class Mark (x)</th>
-                        <th>Frequency (f)</th>
+                        <th>Class Mark</th>
+                        <th>Frequency</th>
                         <th>Relative Frequency</th>
                         <th>Cumulative Frequency</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>55 - 63</td>
-                        <td>59</td>
-                        <td>3</td>
-                        <td>$3/20 = 0.15$</td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <td>64 - 72</td>
-                        <td>68</td>
-                        <td>3</td>
-                        <td>$3/20 = 0.15$</td>
-                        <td>$3+3 = 6$</td>
-                    </tr>
-                    <tr>
-                        <td>73 - 81</td>
-                        <td>77</td>
-                        <td>4</td>
-                        <td>$4/20 = 0.20$</td>
-                        <td>$6+4 = 10$</td>
-                    </tr>
-                    <tr>
-                        <td>82 - 90</td>
-                        <td>86</td>
-                        <td>5</td>
-                        <td>$5/20 = 0.25$</td>
-                        <td>$10+5 = 15$</td>
-                    </tr>
-                    <tr>
-                        <td>91 - 99</td>
-                        <td>95</td>
-                        <td>5</td>
-                        <td>$5/20 = 0.25$</td>
-                        <td>$15+5 = 20$</td>
-                    </tr>
+                    <tr><td>55-63</td><td>59</td><td>3</td><td>0.15</td><td>3</td></tr>
+                    <tr><td>64-72</td><td>68</td><td>3</td><td>0.15</td><td>6</td></tr>
+                    <tr><td>73-81</td><td>77</td><td>4</td><td>0.20</td><td>10</td></tr>
+                    <tr><td>82-90</td><td>86</td><td>5</td><td>0.25</td><td>15</td></tr>
+                    <tr><td>91-99</td><td>95</td><td>5</td><td>0.25</td><td>20</td></tr>
                 </tbody>
                 <tfoot>
-                    <tr>
-                        <td colspan="2">Total</td>
-                        <td>20</td>
-                        <td>1.00</td>
-                        <td></td>
-                    </tr>
+                    <tr><td colspan="2">Total</td><td>20</td><td>1.00</td><td></td></tr>
                 </tfoot>
             </table>
-            <p>
-                From this table, we can quickly see that 25% of students scored between 82 and 90, and 75% of students scored 90 or below (from cumulative frequency). This makes large datasets much easier to understand!
-            </p>
+            <p>This table quickly shows that 25% of students scored between 82-90, and 75% scored 90 or below.</p>
         </section>
 
     </main>

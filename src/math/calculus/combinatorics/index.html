@@ -8,6 +8,33 @@
     <!-- Project Stylesheet -->
     <link rel="stylesheet" href="../../../assets/css/style.css">
 
+    <!-- Page-Specific Styles for Callout Boxes -->
+    <style>
+        .callout {
+            padding: 1.5em;
+            margin: 2em 0;
+            border-left: 5px solid;
+            border-radius: 4px;
+        }
+        .callout h3 {
+            margin-top: 0;
+            color: inherit;
+        }
+        .crit-think {
+            background-color: #e7f3fe;
+            border-color: #2196F3;
+        }
+        .common-pitfall {
+            background-color: #fff0f0;
+            border-color: #f44336;
+        }
+        .geogebra-container {
+            display: flex;
+            justify-content: center;
+            margin: 2em 0;
+        }
+    </style>
+
     <!-- MathJax Configuration -->
     <script>
         MathJax = {
@@ -68,7 +95,7 @@
                 $$ P(n, k) = \frac{n!}{(n-k)!} $$
             </p>
             <p>
-                where $n!$ (n-factorial) is the product of all positive integers up to $n$. For example, the number of ways to arrange 3 books from a set of 5 is $P(5, 3) = \frac{5!}{2!} = 60$.
+                For example, the number of ways to arrange 3 books from a set of 5 is $P(5, 3) = \frac{5!}{2!} = 60$.
             </p>
         </section>
 
@@ -97,6 +124,14 @@
             <p>
                 The coefficients $\binom{n}{k}$ are the same combination numbers we saw earlier, and they can be found in Pascal's Triangle. This theorem is fundamental in probability theory, calculus, and many other areas.
             </p>
+        </section>
+
+        <section class="content-block">
+            <h2>Interactive Exploration</h2>
+            <p>Use the GeoGebra calculator below to explore combinatorial sequences or visualize binomial expansions:</p>
+            <div class="geogebra-container">
+                <iframe scrolling="no" title="GeoGebra Calculator" src="https://www.geogebra.org/calculator?embed" width="100%" height="600" style="border:0px;"></iframe>
+            </div>
         </section>
 
     </main>

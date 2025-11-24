@@ -5,39 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mathematics | Personal Knowledge Project</title>
 
-    <!-- Project Stylesheet -->
+    <!-- Global Stylesheet -->
     <link rel="stylesheet" href="../assets/css/style.css">
 
     <!-- MathJax Configuration -->
     <script>
-        MathJax = {
+        window.MathJax = {
             tex: {
                 inlineMath: [['$', '$'], ['\\(', '\\)']],
                 displayMath: [['$$', '$$'], ['\\[', '\\]']],
                 processEscapes: true
             },
-            options: {
-                enableMenu: false
-            },
-            svg: {
-                fontCache: 'global'
-            }
+            options: { enableMenu: false },
+            svg: { fontCache: 'global' }
         };
     </script>
-
-    <!-- MathJax CDN -->
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </head>
-
 <body>
 
 <!-- NAVIGATION -->
-<nav>
+<nav class="navbar">
     <div class="nav-inner">
         <h2>EduProject</h2>
-        <div>
+        <div class="nav-links">
             <a href="../index.html">Home</a>
-            <a href="index.html">Math</a>
+            <a href="index.html" class="active">Math</a>
             <a href="../physics/index.html">Physics</a>
             <a href="../informatics/index.html">Informatics</a>
         </div>
@@ -52,42 +45,42 @@
     </header>
 
     <main>
+        <!-- Why English -->
         <section class="content-block">
             <h2>Why English?</h2>
             <p>
-                Mathematics is taught globally in English, especially in university-level textbooks.
-                Using it here prepares you for higher academic work and keeps terminology consistent
-                with scientific standards.
+                Mathematics is taught globally in English, particularly in university-level textbooks. 
+                Using English here ensures consistent terminology, prepares for higher studies, and aligns with international academic standards.
             </p>
         </section>
 
+        <!-- GeoGebra Interactive Section -->
         <section class="content-block">
             <h2>Interactive GeoGebra App</h2>
-            <p>The full GeoGebra Classic application is embedded below.</p>
+            <p>Explore dynamic mathematics using the embedded GeoGebra Classic application below.</p>
 
             <iframe
                 src="https://www.geogebra.org/classic"
-                class="sim-frame">
+                class="sim-frame"
+                title="GeoGebra Interactive App"
+                frameborder="0"
+                allowfullscreen>
             </iframe>
         </section>
 
+        <!-- MathJax Examples -->
         <section class="content-block">
             <h2>MathJax Example</h2>
-
             <p class="math-example">
-                \[
-                \int_0^1 x^2 \, dx = \frac{1}{3}
-                \]
+                $$\int_0^1 x^2 \, dx = \frac{1}{3}$$
             </p>
-
             <p class="math-example">
-                Additional test:
-                \[
-                \int_0^1 x^2 \, dx = \frac{1}{3}
-                \]
+                Another example:
+                $$e^{i\pi} + 1 = 0$$
             </p>
         </section>
 
+        <!-- Upcoming Chapters -->
         <section class="content-block">
             <h2>Upcoming Chapters</h2>
             <ul class="chapter-list">

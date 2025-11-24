@@ -3,39 +3,78 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mode of Ungrouped Data</title>
+    <title>Mode of Ungrouped Data | EduProject</title>
 
     <!-- MathJax -->
     <script>
-        MathJax = {
-            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] }
+        window.MathJax = {
+            tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+            svg: { fontCache: 'global' }
         };
     </script>
-    <script id="MathJax-script" async
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
-    <link rel="stylesheet" href="../style.css" />
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="../../../assets/css/style.css" />
 </head>
 <body>
     <div class="container">
-        <header>
+        <header class="page-header">
             <h1>Mode of Ungrouped Data</h1>
-            <a href="../index.html" class="back-button">Back</a>
+            <p class="subtitle">Finding the most frequent value in a simple dataset.</p>
         </header>
 
-        <section class="content-box">
-            <h2>Definition</h2>
-            <p>
-                The <strong>mode</strong> of a dataset is the value that appears
-                most frequently. Ungrouped data means the values are listed
-                individually, not in intervals or classes.
-            </p>
-        </section>
+        <main>
+            <section class="content-block">
+                <h2>Definition</h2>
+                <p>The <strong>mode</strong> is the value that appears most frequently in a dataset.</p>
+                <p>It can be used for both numerical and categorical data, unlike the mean or median.</p>
+            </section>
 
-        <section class="content-box">
-            <h2>How to Find Mode</h2>
-            <p>To determine the mode of ungrouped data:</p>
-            <ol>
-                <li>List all values in the dataset.</li>
-                <li>Count how
+            <section class="content-block">
+                <h2>Steps to Find the Mode</h2>
+                <ol>
+                    <li>List all data points.</li>
+                    <li>Count the frequency of each value.</li>
+                    <li>The value(s) with the highest frequency is/are the <strong>mode</strong>.</li>
+                </ol>
+            </section>
+
+            <section class="content-block">
+                <h2>Example</h2>
+                <p>Consider the dataset:</p>
+                <p class="math-block">$7, 9, 9, 10, 6, 7, 9, 8, 6, 7$</p>
+
+                <table class="frequency-table">
+                    <thead>
+                        <tr><th>Value</th><th>Frequency</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>6</td><td>2</td></tr>
+                        <tr><td>7</td><td>3</td></tr>
+                        <tr><td>8</td><td>1</td></tr>
+                        <tr><td>9</td><td>3</td></tr>
+                        <tr><td>10</td><td>1</td></tr>
+                    </tbody>
+                </table>
+
+                <p>This dataset has two values with the highest frequency: <strong>7</strong> and <strong>9</strong>.</p>
+                <p class="highlight">The dataset is <strong>bimodal</strong>.</p>
+            </section>
+
+            <section class="content-block">
+                <h2>Notes</h2>
+                <ul>
+                    <li>If all values occur the same number of times, there is <strong>no mode</strong>.</li>
+                    <li>If multiple values tie for highest frequency, the dataset is <strong>multimodal</strong>.</li>
+                    <li>The mode is the only measure of central tendency that can be used for categorical data.</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>EduProject © 2025 | GPLv3+</p>
+    </footer>
+</body>
+</html>

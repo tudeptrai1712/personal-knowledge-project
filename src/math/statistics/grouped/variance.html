@@ -49,47 +49,31 @@
         <section class="content-block">
             <h2>What are Variance and Standard Deviation?</h2>
             <p>
-                While the mean, median, and mode tell us about the "center" of a dataset, <strong>variance</strong> and <strong>standard deviation</strong> tell us about its "spread" or "dispersion." They measure how much the data points typically deviate from the mean.
+                Variance and standard deviation measure how data is spread around the mean. A higher value indicates more spread.
             </p>
             <ul>
-                <li><strong>Variance ($s^2$):</strong> The average of the squared differences from the mean. It gives you an idea of how spread out the data is, but its units are squared, making it hard to interpret directly.</li>
-                <li><strong>Standard Deviation ($s$):</strong> The square root of the variance. This brings the measure of spread back to the original units of the data, making it much easier to understand. A larger standard deviation means the data points are more spread out from the mean.</li>
+                <li><strong>Variance ($s^2$):</strong> Average squared deviation from the mean.</li>
+                <li><strong>Standard Deviation ($s$):</strong> Square root of variance, in original units.</li>
             </ul>
-            <p>
-                For <strong>grouped data</strong>, since we don't have individual data points, we estimate these measures of spread using the class marks and frequencies.
-            </p>
         </section>
 
         <section class="content-block">
             <h2>The Formulas</h2>
             <p>
-                The formulas for the (sample) variance and standard deviation of grouped data are:
+                <strong>Variance ($s^2$):</strong> $s^2 = \frac{\sum f_i (x_i - \bar{x})^2}{\sum f_i - 1}$<br>
+                <strong>Standard Deviation ($s$):</strong> $s = \sqrt{s^2}$
             </p>
-            <p>
-                <strong>Variance ($s^2$):</strong>
-                \[
-                s^2 = \frac{\sum f_i (x_i - \bar{x})^2}{\sum f_i - 1}
-                \]
-            </p>
-            <p>
-                <strong>Standard Deviation ($s$):</strong>
-                \[
-                s = \sqrt{s^2}
-                \]
-            </p>
-            <p>Where:</p>
             <ul>
-                <li>$f_i$ = The frequency of each class.</li>
-                <li>$x_i$ = The class mark (midpoint) of each class interval.</li>
-                <li>$\bar{x}$ = The mean of the grouped data. (You'll need to calculate this first!)</li>
-                <li>$\sum f_i$ = The total number of observations.</li>
-                <li>$- 1$ in the denominator is used for <strong>sample variance</strong>, providing a better estimate of the population variance. If you were working with a whole population, you'd just use $\sum f_i$. For "101" purposes, sample variance is more commonly encountered.</li>
+                <li>$f_i$ = Frequency of class</li>
+                <li>$x_i$ = Class midpoint</li>
+                <li>$\bar{x}$ = Mean of grouped data</li>
+                <li>$\sum f_i$ = Total observations</li>
             </ul>
         </section>
 
         <section class="content-block">
-            <h2>How to Calculate Variance & Standard Deviation for Grouped Data (Step-by-Step)</h2>
-            <p>Let's use the same student test scores example. We've already calculated the mean ($\bar{x} = 79.7$) from the <a href="mean.html">Mean of Grouped Data</a> page.</p>
+            <h2>Step-by-Step Example</h2>
+            <p>Using the same student test scores example (mean $\bar{x} = 79.7$).</p>
 
             <table class="frequency-table">
                 <thead>
@@ -97,7 +81,7 @@
                         <th>Class Interval</th>
                         <th>Frequency (f)</th>
                         <th>Class Mark (x)</th>
-                        <th>$f_i x_i$</th> <!-- To recalculate mean as a check or for reference -->
+                        <th>$f_i x_i$</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -110,69 +94,22 @@
                 <tfoot>
                     <tr>
                         <td>Total</td>
-                        <td>$\sum f_i = 20$</td>
+                        <td>20</td>
                         <td></td>
-                        <td>$\sum f_i x_i = 1594$</td>
+                        <td>1594</td>
                     </tr>
                 </tfoot>
             </table>
-            <p>From this table, we know $N = \sum f_i = 20$ and the mean $\bar{x} = 1594 / 20 = 79.7$.</p>
 
             <ol>
-                <li>
-                    <strong>Calculate the Mean ($\bar{x}$) of the Grouped Data:</strong>
-                    As mentioned, $\bar{x} = 79.7$.
-                </li>
-                <li>
-                    <strong>Calculate the Deviation from the Mean ($x_i - \bar{x}$) for each class mark:</strong>
-                    <ul>
-                        <li>$59 - 79.7 = -20.7$</li>
-                        <li>$68 - 79.7 = -11.7$</li>
-                        <li>$77 - 79.7 = -2.7$</li>
-                        <li>$86 - 79.7 = 6.3$</li>
-                        <li>$95 - 79.7 = 15.3$</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Square the Deviation ($(x_i - \bar{x})^2$) for each class:</strong>
-                    <ul>
-                        <li>$(-20.7)^2 = 428.49$</li>
-                        <li>$(-11.7)^2 = 136.89$</li>
-                        <li>$(-2.7)^2 = 7.29$</li>
-                        <li>$(6.3)^2 = 39.69$</li>
-                        <li>$(15.3)^2 = 234.09$</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Multiply the Squared Deviation by the Frequency ($f_i (x_i - \bar{x})^2$) for each class:</strong>
-                    <ul>
-                        <li>$3 \times 428.49 = 1285.47$</li>
-                        <li>$3 \times 136.89 = 410.67$</li>
-                        <li>$4 \times 7.29 = 29.16$</li>
-                        <li>$5 \times 39.69 = 198.45$</li>
-                        <li>$5 \times 234.09 = 1170.45$</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Sum the $f_i (x_i - \bar{x})^2$ column ($\sum f_i (x_i - \bar{x})^2$):</strong>
-                    <p>$\sum f_i (x_i - \bar{x})^2 = 1285.47 + 410.67 + 29.16 + 198.45 + 1170.45 = 3094.2$</p>
-                </li>
-                <li>
-                    <strong>Apply the Variance Formula:</strong>
-                    <p>
-                        $s^2 = \frac{3094.2}{20 - 1} = \frac{3094.2}{19} \approx 162.85$
-                    </p>
-                </li>
-                <li>
-                    <strong>Calculate the Standard Deviation (Square root of variance):</strong>
-                    <p>
-                        $s = \sqrt{162.85} \approx 12.76$
-                    </p>
-                </li>
+                <li>Calculate deviations: $x_i - \bar{x}$</li>
+                <li>Square deviations: $(x_i - \bar{x})^2$</li>
+                <li>Multiply by frequency: $f_i (x_i - \bar{x})^2$</li>
+                <li>Sum values: $\sum f_i (x_i - \bar{x})^2 = 3094.2$</li>
+                <li>Variance: $s^2 = 3094.2 / (20-1) \approx 162.85$</li>
+                <li>Standard deviation: $s = \sqrt{162.85} \approx 12.76$</li>
             </ol>
-            <p>
-                So, the estimated variance of the test scores is approximately <strong>162.85</strong>, and the estimated standard deviation is approximately <strong>12.76</strong>. This means, on average, test scores deviate from the mean (79.7) by about 12.76 points.
-            </p>
+            <p>Estimated variance: <strong>162.85</strong>, estimated standard deviation: <strong>12.76</strong>.</p>
         </section>
 
     </main>
