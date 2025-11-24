@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mode of Ungrouped Data | Personal Knowledge Project</title>
+    <title>Median of Ungrouped Data | Personal Knowledge Project</title>
 
     <!-- Global CSS -->
     <link rel="stylesheet" href="../../../assets/css/style.css">
@@ -40,76 +40,108 @@
 <div class="container">
 
     <header class="page-header">
-        <h1>Mode of Ungrouped Data</h1>
-        <p class="subtitle">Finding the most frequent value in a simple dataset.</p>
+        <h1>Median of Ungrouped Data</h1>
+        <p class="subtitle">Finding the middle value of a dataset.</p>
     </header>
 
     <main>
 
-        <!-- Introduction -->
+        <!-- Definition -->
         <section class="content-block">
-            <h2>What is the Mode?</h2>
+            <h2>What is the Median?</h2>
             <p>
-                The <strong>mode</strong> is the value that occurs most frequently in a dataset.
+                The <strong>median</strong> is the middle value of a dataset when the numbers are arranged in order.
             </p>
             <p>
-                It is the simplest measure of central tendency and is especially useful for identifying the most common value or category in a set of data.
+                It divides the data into two equal halves — 50% of values are below it, and 50% are above it.
             </p>
-            <p>
-                Unlike the mean or median, the mode:
-            </p>
+
+            <p>The median is:</p>
             <ul>
-                <li>Can be used for numerical <em>or</em> categorical (non-numerical) data</li>
-                <li>May have one mode (unimodal), more than one (multimodal), or no mode at all</li>
+                <li>Unaffected by extreme values (outliers)</li>
+                <li>More representative than the mean for skewed data</li>
+                <li>Always based on ordered values</li>
             </ul>
         </section>
 
-        <!-- How to find the Mode -->
+        <!-- Steps -->
         <section class="content-block">
-            <h2>How to Find the Mode</h2>
-            <p>The steps are straightforward:</p>
+            <h2>How to Find the Median</h2>
+            <p>Follow these steps:</p>
             <ol>
-                <li>List the data.</li>
-                <li>Count how many times each value appears.</li>
-                <li>The value with the highest frequency is the <strong>mode</strong>.</li>
+                <li>Arrange the data in ascending order.</li>
+                <li>Count the total number of observations \( n \).</li>
+                <li>
+                    Determine whether \( n \) is **odd** or **even**:
+                    <ul>
+                        <li>If \( n \) is <strong>odd</strong>: the median is the middle value.</li>
+                        <li>If \( n \) is <strong>even</strong>: the median is the average of the two middle values.</li>
+                    </ul>
+                </li>
             </ol>
+        </section>
+
+        <!-- Formula -->
+        <section class="content-block">
+            <h2>Median Formulas</h2>
+
+            <p><strong>Case 1: Odd number of values</strong></p>
+            <p class="math-block">
+                \[
+                Me = x_{\frac{n+1}{2}}
+                \]
+            </p>
+
+            <p><strong>Case 2: Even number of values</strong></p>
+            <p class="math-block">
+                \[
+                Me = \frac{x_{\frac{n}{2}} + x_{\frac{n}{2}+1}}{2}
+                \]
+            </p>
         </section>
 
         <!-- Example -->
         <section class="content-block">
             <h2>Example</h2>
-            <p>Consider the following set of student quiz scores:</p>
 
+            <h3>Dataset:</h3>
             <p class="math-block">
                 \[
-                7,\; 9,\; 9,\; 10,\; 6,\; 7,\; 9,\; 8,\; 6,\; 7
+                12,\; 7,\; 15,\; 10,\; 9,\; 8
                 \]
             </p>
 
-            <p>Let's count each value:</p>
+            <h3>Step 1: Order the data</h3>
+            <p class="math-block">
+                \[
+                7,\; 8,\; 9,\; 10,\; 12,\; 15
+                \]
+            </p>
 
-            <table class="frequency-table">
-                <thead>
-                    <tr>
-                        <th>Value</th>
-                        <th>Frequency</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>6</td><td>2</td></tr>
-                    <tr><td>7</td><td>3</td></tr>
-                    <tr><td>8</td><td>1</td></tr>
-                    <tr><td>9</td><td>3</td></tr>
-                    <tr><td>10</td><td>1</td></tr>
-                </tbody>
-            </table>
-
+            <h3>Step 2: Count the values</h3>
             <p>
-                The values <strong>7</strong> and <strong>9</strong> both appear 3 times — the highest frequency.
+                There are \( n = 6 \) values (even).
+            </p>
+
+            <h3>Step 3: Find the median</h3>
+            <p>
+                The two middle values are:
+            </p>
+            <p class="math-block">
+                \[
+                x_3 = 9,\quad x_4 = 10
+                \]
+            </p>
+
+            <p>Apply the formula:</p>
+            <p class="math-block">
+                \[
+                Me = \frac{9 + 10}{2} = 9.5
+                \]
             </p>
 
             <p class="highlight">
-                This dataset is <strong>bimodal</strong>: the modes are <strong>7</strong> and <strong>9</strong>.
+                The median of this dataset is <strong>9.5</strong>.
             </p>
         </section>
 
@@ -118,13 +150,13 @@
             <h2>Important Notes</h2>
             <ul>
                 <li>
-                    If all values occur the same number of times, the dataset has <strong>no mode</strong>.
+                    The data <strong>must</strong> be sorted before finding the median.
                 </li>
                 <li>
-                    If more than one value ties for highest frequency, the distribution is <strong>multimodal</strong>.
+                    For datasets with repeated values, the procedure is unchanged — only the position matters.
                 </li>
                 <li>
-                    The mode is the only central tendency measure appropriate for categorical data (e.g., colors, names, brands).
+                    The median is a robust measure and does not get distorted by extremely large or small values.
                 </li>
             </ul>
         </section>
