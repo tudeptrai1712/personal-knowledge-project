@@ -41,7 +41,7 @@
 
     <header class="page-header">
         <h1>Mean of Grouped Data</h1>
-        <p class="subtitle">Estimating the average when you only have intervals.</p>
+        <p class="subtitle">Estimating the average using class intervals.</p>
     </header>
 
     <main>
@@ -49,36 +49,31 @@
         <section class="content-block">
             <h2>What is the Mean for Grouped Data?</h2>
             <p>
-                The <strong>mean</strong> (or average) is a fundamental way to describe the center of a dataset. When you have individual data points, you just add them all up and divide by the count.
+                The <strong>mean</strong> describes the center of a dataset. For individual data points, you simply sum all values and divide by the total count.
             </p>
             <p>
-                However, for <strong>grouped data</strong>, your data is organized into class intervals (e.g., test scores from 70-79, 80-89) along with how many data points fall into each interval (the frequency). You don't know the exact individual values. In this case, we calculate an <em>estimated mean</em> using a simple formula.
+                For <strong>grouped data</strong>, values are grouped into intervals with corresponding frequencies. The exact values inside each interval are unknown, so we estimate the mean using class midpoints.
             </p>
         </section>
 
         <section class="content-block">
-            <h2>The Formula</h2>
-            <p>
-                The formula to calculate the estimated mean ($\bar{x}$) for grouped data is:
-            </p>
+            <h2>Formula</h2>
+            <p>The estimated mean ($\bar{x}$) is calculated as:</p>
             <p>
                 \[
                 \bar{x} = \frac{\sum f_i x_i}{\sum f_i}
                 \]
             </p>
-            <p>Where:</p>
             <ul>
-                <li>$\bar{x}$ = The estimated mean</li>
-                <li>$\sum$ = Sum (meaning "add everything up")</li>
-                <li>$f_i$ = The frequency of each class (how many data points are in that interval)</li>
-                <li>$x_i$ = The class mark (or midpoint) of each class interval</li>
+                <li>$f_i$ = Frequency of each class</li>
+                <li>$x_i$ = Class midpoint (or class mark)</li>
+                <li>$\sum$ = Sum across all classes</li>
             </ul>
         </section>
 
         <section class="content-block">
-            <h2>How to Calculate the Mean for Grouped Data (Step-by-Step)</h2>
-            <p>Let's use an example to walk through the process.</p>
-            <p>Suppose you have the following frequency distribution for student test scores:</p>
+            <h2>Step-by-Step Example</h2>
+            <p>Given the following frequency table for student test scores:</p>
 
             <table class="frequency-table">
                 <thead>
@@ -98,49 +93,41 @@
 
             <ol>
                 <li>
-                    <strong>Find the Class Mark ($x_i$) for each Class Interval:</strong>
-                    The class mark is the midpoint of each interval. Add the lower and upper limits and divide by 2.
+                    <strong>Find Class Midpoints ($x_i$):</strong>
                     <ul>
-                        <li>55 - 63: $(55+63)/2 = 59$</li>
-                        <li>64 - 72: $(64+72)/2 = 68$</li>
-                        <li>73 - 81: $(73+81)/2 = 77$</li>
-                        <li>82 - 90: $(82+90)/2 = 86$</li>
-                        <li>91 - 99: $(91+99)/2 = 95$</li>
+                        <li>55 - 63: $x = (55+63)/2 = 59$</li>
+                        <li>64 - 72: $x = 68$</li>
+                        <li>73 - 81: $x = 77$</li>
+                        <li>82 - 90: $x = 86$</li>
+                        <li>91 - 99: $x = 95$</li>
                     </ul>
                 </li>
                 <li>
-                    <strong>Multiply the Frequency ($f_i$) by the Class Mark ($x_i$) for each class ($f_i x_i$):</strong>
+                    <strong>Multiply Frequency by Midpoint ($f_i x_i$):</strong>
                     <ul>
-                        <li>$3 \times 59 = 177$</li>
-                        <li>$3 \times 68 = 204$</li>
-                        <li>$4 \times 77 = 308$</li>
-                        <li>$5 \times 86 = 430$</li>
-                        <li>$5 \times 95 = 475$</li>
+                        <li>$3 \cdot 59 = 177$</li>
+                        <li>$3 \cdot 68 = 204$</li>
+                        <li>$4 \cdot 77 = 308$</li>
+                        <li>$5 \cdot 86 = 430$</li>
+                        <li>$5 \cdot 95 = 475$</li>
                     </ul>
                 </li>
-                <li>
-                    <strong>Sum the $f_i x_i$ column ($\sum f_i x_i$):</strong>
-                    <p>$\sum f_i x_i = 177 + 204 + 308 + 430 + 475 = 1594$</p>
-                </li>
-                <li>
-                    <strong>Sum the Frequencies ($\sum f_i$):</strong>
-                    This is the total number of data points.
-                    <p>$\sum f_i = 3 + 3 + 4 + 5 + 5 = 20$</p>
-                </li>
-                <li>
-                    <strong>Apply the Formula:</strong>
-                    <p>$\bar{x} = \frac{\sum f_i x_i}{\sum f_i} = \frac{1594}{20} = 79.7$</p>
+                <li><strong>Sum $f_i x_i$: </strong> $177 + 204 + 308 + 430 + 475 = 1594$</li>
+                <li><strong>Sum Frequencies ($\sum f_i$):</strong> $3 + 3 + 4 + 5 + 5 = 20$</li>
+                <li><strong>Calculate Mean:</strong>
+                    \[
+                    \bar{x} = \frac{1594}{20} = 79.7
+                    \]
                 </li>
             </ol>
-            <p>
-                So, the estimated mean test score for this grouped data is <strong>79.7</strong>.
-            </p>
+
+            <p>The estimated mean score is <strong>79.7</strong>.</p>
         </section>
 
         <section class="content-block">
-            <h2>Why is it an "Estimated" Mean?</h2>
+            <h2>Why It’s an Estimate</h2>
             <p>
-                It's important to remember that this is an <em>estimate</em>. Because we don't know the exact individual scores within each interval, we assume that the midpoint (class mark) is a good representation of all the data in that interval. This gives us a very good approximation of the true mean.
+                Since we assume that all values in a class interval are represented by the midpoint, the mean is an <em>approximation</em>. It’s usually very close to the true mean for large datasets.
             </p>
         </section>
 

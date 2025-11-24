@@ -3,10 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Antiderivatives | Personal Knowledge Project</title>
+    <title>Antiderivatives: A Critical Approach | EduProject</title>
 
     <!-- Project Stylesheet -->
     <link rel="stylesheet" href="../../../assets/css/style.css">
+
+    <!-- Page-Specific Styles for Callout Boxes -->
+    <style>
+        .callout {
+            padding: 1.5em;
+            margin: 2em 0;
+            border-left: 5px solid;
+            border-radius: 4px;
+        }
+        .callout h3 {
+            margin-top: 0;
+            color: inherit;
+        }
+        .crit-think {
+            background-color: #e7f3fe;
+            border-color: #2196F3;
+        }
+        .common-pitfall {
+            background-color: #fff0f0;
+            border-color: #f44336;
+        }
+        .geogebra-container {
+            display: flex;
+            justify-content: center;
+            margin: 2em 0;
+        }
+    </style>
 
     <!-- MathJax Configuration -->
     <script>
@@ -19,13 +46,8 @@
             options: {
                 enableMenu: false
             },
-            svg: {
-                fontCache: 'global'
-            }
         };
     </script>
-
-    <!-- MathJax CDN -->
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </head>
 
@@ -48,71 +70,195 @@
 <div class="container">
     <header class="page-header">
         <h1>Antiderivatives</h1>
-        <p class="subtitle">Understanding the reverse process of differentiation.</p>
+        <p class="subtitle">Beyond Reversing Rules: The 'Why' of Finding the Original Function</p>
     </header>
 
     <main>
         <section class="content-block">
-            <h2>Definition of an Antiderivative</h2>
-            <p>
-                A function $F$ is called an <strong>antiderivative</strong> of a function $f$ on an interval $I$ if $F'(x) = f(x)$ for all $x$ in $I$.
-            </p>
-            <p>
-                For example, if $f(x) = 2x$, then $F(x) = x^2$ is an antiderivative of $f(x)$ because the derivative of $x^2$ is $2x$.
-            </p>
-            <p>
-                Note that if $F(x)$ is an antiderivative of $f(x)$, then so is $F(x) + C$ for any constant $C$. This is because the derivative of a constant is zero. We call $C$ the <strong>constant of integration</strong>. The general form of the antiderivative of $f$ is $F(x) + C$.
+            <h2>1. The Core Idea: Reversing a Rate of Change</h2>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Concept</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Differentiation</strong></td>
+                        <td>The process of finding the instantaneous rate of change (the slope) of a function. Given $F(x)$, find $F'(x) = f(x)$.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Antidifferentiation</strong></td>
+                        <td>The process of reconstructing the original function from its rate of change. Given $f(x)$, find a function $F(x)$ such that $F'(x) = f(x)$.</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="callout crit-think">
+                <h3>Critical Thinking: The Language of Physics</h3>
+                <table class="styled-table">
+                    <thead>
+                        <tr><th>If...</th><th>Then...</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>$f(x)$ represents <strong>velocity</strong></td><td>$F(x)$ represents <strong>position</strong></td></tr>
+                        <tr><td>The antiderivative of velocity is...</td><td>Position</td></tr>
+                        <tr><td>The derivative of position is...</td><td>Velocity</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="geogebra-container">
+                <iframe scrolling="no" title="GeoGebra Classic" src="https://www.geogebra.org/classic" width="100%" height="600" style="border:0px;"> </iframe>
+            </div>
+            <p class="caption">
+                <strong>Explore:</strong> Use the GeoGebra app above to build your intuition. Try typing these commands into the input bar:
+                <br>1. <code>f(x) = x^2</code>
+                <br>2. <code>g(x) = f'(x)</code>
+                <br>Now, hide the original function <code>f(x)</code>. Can you see how the value of <code>g(x)</code> at any point corresponds to the slope of <code>f(x)</code>?
             </p>
         </section>
 
         <section class="content-block">
-            <h2>The Indefinite Integral</h2>
-            <p>
-                The set of all antiderivatives of a function $f(x)$ is called the <strong>indefinite integral</strong> of $f(x)$ and is denoted by:
-                $$ \int f(x) \,dx = F(x) + C $$
-                Here, $\int$ is the integral symbol, $f(x)$ is the integrand, and $dx$ indicates that the variable of integration is $x$.
+            <h2>2. The "Lost Constant" and the Family of Functions</h2>
+            <p>When we differentiate, information about constant terms is lost. This leads to the idea of a "family" of antiderivatives.</p>
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Function $F(x)$</th>
+                        <th>Its Derivative $F'(x)$</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>$x^2$</td><td>$2x$</td></tr>
+                    <tr><td>$x^2 + 3$</td><td>$2x$</td></tr>
+                    <tr><td>$x^2 - 100$</td><td>$2x$</td></tr>
+                    <tr><td>$x^2 + C$ (for any constant C)</td><td>$2x$</td></tr>
+                </tbody>
+            </table>
+            <p>The indefinite integral is not a single function, but an entire <strong>family of functions</strong>: $$ \int f(x) \,dx = F(x) + C $$</p>
+
+            <div class="callout common-pitfall">
+                <h3>Systematic Error: Forgetting the Constant of Integration</h3>
+                <table class="styled-table">
+                    <thead>
+                        <tr><th>Common Mistake</th><th>Correct Understanding</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Writing $\int 2x \,dx = x^2$.</td>
+                            <td>Writing $\int 2x \,dx = x^2 + C$. You are not finding one function, but the entire family of functions whose derivative is $2x$.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="geogebra-container">
+                <iframe scrolling="no" title="GeoGebra Classic" src="https://www.geogebra.org/classic" width="100%" height="600" style="border:0px;"> </iframe>
+            </div>
+             <p class="caption">
+                <strong>Explore:</strong> Use the app above to visualize the family of functions. Type in a few related functions:
+                <br>1. <code>F_1(x) = x^2 + 2</code>
+                <br>2. <code>F_2(x) = x^2 - 1</code>
+                <br>3. <code>F_3(x) = x^2</code>
+                <br>Notice how they are all vertical shifts of each other. Now, see their common derivative by plotting: <code>f(x) = F_1'(x)</code>.
             </p>
         </section>
 
         <section class="content-block">
-            <h2>Basic Integration Rules</h2>
-            <p>Just as with differentiation, there are several rules to help us find antiderivatives.</p>
-            <ul class="formula-list">
-                <li><strong>Power Rule:</strong> $\int x^n \,dx = \frac{x^{n+1}}{n+1} + C$, for $n \neq -1$</li>
-                <li><strong>Constant Rule:</strong> $\int k \,dx = kx + C$</li>
-                <li><strong>Constant Multiple Rule:</strong> $\int k f(x) \,dx = k \int f(x) \,dx$</li>
-                <li><strong>Sum/Difference Rule:</strong> $\int [f(x) \pm g(x)] \,dx = \int f(x) \,dx \pm \int g(x) \,dx$</li>
-                <li><strong>Exponential Functions:</strong>
-                    <ul>
-                        <li>$\int e^x \,dx = e^x + C$</li>
-                        <li>$\int a^x \,dx = \frac{a^x}{\ln a} + C$</li>
-                    </ul>
-                </li>
-                <li><strong>Logarithmic Function:</strong> $\int \frac{1}{x} \,dx = \ln|x| + C$</li>
-                <li><strong>Trigonometric Functions:</strong>
-                    <ul>
-                        <li>$\int \sin(x) \,dx = -\cos(x) + C$</li>
-                        <li>$\int \cos(x) \,dx = \sin(x) + C$</li>
-                        <li>$\int \sec^2(x) \,dx = \tan(x) + C$</li>
-                    </ul>
-                </li>
-            </ul>
+            <h2>3. Systematizing the Rules</h2>
+            <p>Antiderivative rules are simply differentiation rules in reverse.</p>
+            
+            <table class="styled-table">
+                <thead>
+                    <tr>
+                        <th>Differentiation Rule</th>
+                        <th>Antiderivative Rule (Indefinite Integral)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>$\frac{d}{dx}(x^{n+1}) = (n+1)x^n$</td>
+                        <td>$\int x^n \,dx = \frac{x^{n+1}}{n+1} + C \quad (n \neq -1)$</td>
+                    </tr>
+                    <tr>
+                        <td>$\frac{d}{dx}(\ln x) = \frac{1}{x}$</td>
+                        <td>$\int \frac{1}{x} \,dx = \ln|x| + C$</td>
+                    </tr>
+                    <tr>
+                        <td>$\frac{d}{dx}(e^x) = e^x$</td>
+                        <td>$\int e^x \,dx = e^x + C$</td>
+                    </tr>
+                    <tr>
+                        <td>$\frac{d}{dx}(\sin x) = \cos x$</td>
+                        <td>$\int \cos x \,dx = \sin x + C$</td>
+                    </tr>
+                    <tr>
+                        <td>$\frac{d}{dx}(-\cos x) = \sin x$</td>
+                        <td>$\int \sin x \,dx = -\cos x + C$</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="callout crit-think">
+                <h3>Systematic Error: The Absolute Value in $\ln|x|$</h3>
+                <table class="styled-table">
+                    <thead><tr><th>Function</th><th>Domain</th></tr></thead>
+                    <tbody>
+                        <tr><td>$f(x) = 1/x$</td><td>$x \neq 0$</td></tr>
+                        <tr><td>$\ln(x)$</td><td>$x > 0$ (Domain mismatch!)</td></tr>
+                        <tr><td>$\ln|x|$</td><td>$x \neq 0$ (Correct domain)</td></tr>
+                    </tbody>
+                </table>
+                 <p>The use of $\ln|x|$ correctly gives us an antiderivative that is defined over the same domain as the original function.</p>
+            </div>
         </section>
 
         <section class="content-block">
-            <h2>Example</h2>
-            <p>
-                Find the indefinite integral of $f(x) = 3x^2 + 4x - 5$.
-            </p>
-            <p>
-                Using the rules above, we can integrate term by term:
-                $$ \int (3x^2 + 4x - 5) \,dx = \int 3x^2 \,dx + \int 4x \,dx - \int 5 \,dx $$
-                $$ = 3 \int x^2 \,dx + 4 \int x \,dx - 5 \int 1 \,dx $$
-                $$ = 3 \left(\frac{x^3}{3}\right) + 4 \left(\frac{x^2}{2}\right) - 5(x) + C $$
-                $$ = x^3 + 2x^2 - 5x + C $$
-                Therefore, the general antiderivative of $f(x) = 3x^2 + 4x - 5$ is $F(x) = x^3 + 2x^2 - 5x + C$.
-            </p>
+            <h2>4. A Worked Example: Critical Analysis</h2>
+            <p>Find the indefinite integral of $f(x) = 3x^2 + \cos(x)$.</p>
+            <table class="styled-table">
+                <thead>
+                    <tr><th>Step</th><th>Action</th><th>Resulting Expression</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td><strong>Apply Sum Rule:</strong> Separate the integral.</td>
+                        <td>$\int 3x^2 \,dx + \int \cos(x) \,dx$</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td><strong>Apply Constant Multiple Rule.</strong></td>
+                        <td>$3 \int x^2 \,dx + \int \cos(x) \,dx$</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td><strong>Apply Power and Trig Rules.</strong></td>
+                        <td>$3 \left(\frac{x^3}{3}\right) + (\sin(x)) + C$</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td><strong>Simplify.</strong></td>
+                        <td>$x^3 + \sin(x) + C$</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="callout crit-think">
+                <h3>Final Check: The Scientific Method</h3>
+                <table class="styled-table">
+                    <thead><tr><th>Component</th><th>Function / Action</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>Hypothesis</strong> (Our Antiderivative)</td><td>$F(x) = x^3 + \sin(x) + C$</td></tr>
+                        <tr><td><strong>Verification</strong> (Differentiate)</td><td>$F'(x) = 3x^2 + \cos(x)$</td></tr>
+                        <tr><td><strong>Conclusion</strong></td><td>$F'(x)$ matches the original integrand $f(x)$. The hypothesis is correct.</td></tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
+
     </main>
 </div>
 

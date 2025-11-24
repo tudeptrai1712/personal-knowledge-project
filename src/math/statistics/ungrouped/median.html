@@ -46,6 +46,47 @@
 
     <main>
 
+        <section class="content-block">
+            <h2>What is the Mode?</h2>
+            <p>The <strong>mode</strong> is the value that occurs most frequently in a dataset.</p>
+            <p>It is useful for identifying the most common value or category. Unlike mean or median, the mode:</p>
+            <ul>
+                <li>Can be used for numerical or categorical data</li>
+                <li>May have one mode (unimodal), more than one (multimodal), or no mode</li>
+            </ul>
+        </section>
+
+        <section class="content-block">
+            <h2>How to Find the Mode</h2>
+            <ol>
+                <li>List the data.</li>
+                <li>Count how many times each value appears.</li>
+                <li>The value(s) with the highest frequency is the mode.</li>
+            </ol>
+        </section>
+
+        <section class="content-block">
+            <h2>Example</h2>
+            <p>Consider the student quiz scores:</p>
+            <p class="math-block">\[ 7, 9, 9, 10, 6, 7, 9, 8, 6, 7 \]</p>
+
+            <table class="frequency-table">
+                <thead>
+                    <tr>
+                        <th>Value</th>
+                        <th>Frequency</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>6</td><td>2</td></tr>
+                    <tr><td>7</td><td>3</td></tr>
+                    <tr><td>8</td><td>1</td></tr>
+                    <tr><td>9</td><td>3</td></tr>
+                    <tr><td>10</td><td>1</td></tr>
+                </tbody>
+            </table>
+
+            <p class="highlight">This dataset is <strong>bimodal</strong>: the modes are <strong>7</strong> and <strong>9</strong>.</p>
         <!-- Definition -->
         <section class="content-block">
             <h2>What is the Median?</h2>
@@ -145,10 +186,12 @@
             </p>
         </section>
 
-        <!-- Notes -->
         <section class="content-block">
             <h2>Important Notes</h2>
             <ul>
+                <li>If all values occur the same number of times, there is no mode.</li>
+                <li>If more than one value ties for highest frequency, the distribution is multimodal.</li>
+                <li>The mode is appropriate for categorical data (e.g., colors, names, brands).</li>
                 <li>
                     The data <strong>must</strong> be sorted before finding the median.
                 </li>

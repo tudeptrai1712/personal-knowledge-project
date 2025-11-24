@@ -16,17 +16,28 @@
                 displayMath: [['$$', '$$'], ['\\[', '\\]']],
                 processEscapes: true
             },
-            options: {
-                enableMenu: false
-            },
-            svg: {
-                fontCache: 'global'
-            }
+            options: { enableMenu: false },
+            svg: { fontCache: 'global' }
         };
     </script>
 
     <!-- MathJax CDN -->
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+    <!-- Geogebra Basic Iframe Styles -->
+    <style>
+        .geogebra-container {
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+        .geogebra-container iframe {
+            width: 700px;
+            height: 500px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+    </style>
 </head>
 
 <body>
@@ -54,74 +65,54 @@
     <main>
         <section class="content-block">
             <h2>What is a Limit?</h2>
-            <p>
-                A limit is the value that a function "approaches" as the input "approaches" some value. Limits are essential to calculus as they are used to define continuity, derivatives, and integrals. The core idea is about getting arbitrarily close to a point, without actually being at that point.
-            </p>
+            <p>A limit is the value that a function "approaches" as the input "approaches" some value. Limits are essential to calculus as they are used to define continuity, derivatives, and integrals. The core idea is about getting arbitrarily close to a point, without actually being at that point.</p>
             <p>We write the limit of a function $f(x)$ as $x$ approaches $c$ as:</p>
-            <p>
-                $$ \lim_{x \to c} f(x) = L $$
-            </p>
+            <p>$$ \lim_{x \to c} f(x) = L $$</p>
             <p>This means that the value of $f(x)$ can be made as close as we want to $L$ by choosing $x$ sufficiently close to $c$.</p>
         </section>
 
         <section class="content-block">
             <h2>Finding Limits Analytically</h2>
-            <p>Several methods can be used to find limits:</p>
             <ul>
-                <li><strong>Direct Substitution:</strong> If the function is continuous at $x=c$, we can often just plug in $c$ to find the limit. For example, $\lim_{x \to 2} (x^2 + 1) = 2^2 + 1 = 5$.</li>
-                <li><strong>Factoring and Canceling:</strong> If direct substitution results in an indeterminate form like $\frac{0}{0}$, we can often factor the numerator and denominator and cancel common factors.</li>
-                <li><strong>Rationalizing:</strong> For functions involving radicals, multiplying the numerator and denominator by the conjugate can help resolve indeterminate forms.</li>
+                <li><strong>Direct Substitution:</strong> If the function is continuous at $x=c$, we can often just plug in $c$. Example: $\lim_{x \to 2} (x^2 + 1) = 5$.</li>
+                <li><strong>Factoring and Canceling:</strong> For indeterminate forms like $0/0$, factor numerator and denominator to simplify.</li>
+                <li><strong>Rationalizing:</strong> For radicals, multiply by the conjugate to simplify.</li>
             </ul>
         </section>
 
         <section class="content-block">
             <h2>One-Sided Limits</h2>
-            <p>
-                A limit can also be approached from one side.
-            </p>
             <ul>
-                <li>The <strong>limit from the left</strong>, $\lim_{x \to c^-} f(x)$, considers only values of $x$ less than $c$.</li>
-                <li>The <strong>limit from the right</strong>, $\lim_{x \to c^+} f(x)$, considers only values of $x$ greater than $c$.</li>
+                <li><strong>Left-hand limit:</strong> $\lim_{x \to c^-} f(x)$</li>
+                <li><strong>Right-hand limit:</strong> $\lim_{x \to c^+} f(x)$</li>
             </ul>
-            <p>
-                A two-sided limit $\lim_{x \to c} f(x)$ exists if and only if both the left and right-sided limits exist and are equal.
-            </p>
+            <p>A two-sided limit exists if both one-sided limits exist and are equal.</p>
         </section>
 
         <section class="content-block">
-            <h2>Infinite Limits and Vertical Asymptotes</h2>
-            <p>
-                An <strong>infinite limit</strong> occurs when the function's values increase or decrease without bound as $x$ approaches a certain number.
-            </p>
-            <p>
-                $$ \lim_{x \to c} f(x) = \infty \quad \text{or} \quad \lim_{x \to c} f(x) = -\infty $$
-            </p>
-            <p>
-                When this happens, the line $x=c$ is a <strong>vertical asymptote</strong> of the graph of $f(x)$. This often occurs in rational functions where the denominator is zero at $x=c$ but the numerator is not.
-            </p>
+            <h2>Infinite Limits & Vertical Asymptotes</h2>
+            <p>When a function grows without bound near $x=c$:</p>
+            <p>$$ \lim_{x \to c} f(x) = \infty \quad \text{or} \quad -\infty $$</p>
+            <p>Here, $x=c$ is a vertical asymptote.</p>
         </section>
-        
+
         <section class="content-block">
-            <h2>Limits at Infinity and Horizontal Asymptotes</h2>
-            <p>
-                We can also examine the end behavior of a function by looking at its <strong>limit at infinity</strong>.
-            </p>
-            <p>
-                $$ \lim_{x \to \infty} f(x) = L \quad \text{or} \quad \lim_{x \to -\infty} f(x) = M $$
-            </p>
-            <p>
-                If such a limit $L$ or $M$ exists, it means the function approaches a specific value as $x$ gets very large (or very small). The lines $y=L$ and $y=M$ are <strong>horizontal asymptotes</strong>. For rational functions, these can be found by comparing the degrees of the numerator and denominator.
-            </p>
+            <h2>Limits at Infinity & Horizontal Asymptotes</h2>
+            <p>End behavior is captured via limits at infinity:</p>
+            <p>$$ \lim_{x \to \infty} f(x) = L, \quad \lim_{x \to -\infty} f(x) = M $$</p>
+            <p>If these exist, the lines $y=L$ and $y=M$ are horizontal asymptotes.</p>
         </section>
 
         <section class="content-block">
             <h2>Continuity and The Squeeze Theorem</h2>
-            <p>
-                A function $f$ is <strong>continuous</strong> at a point $c$ if $\lim_{x \to c} f(x) = f(c)$. This means the limit exists, the function is defined at that point, and the two values are equal.
-            </p>
-            <p>
-                The <strong>Squeeze Theorem</strong> is a powerful tool used to find the limit of a function that is "squeezed" between two other functions that have the same limit at a given point.
-            </p>
+            <p>A function $f$ is continuous at $c$ if $\lim_{x \to c} f(x) = f(c)$. The Squeeze Theorem helps find limits for functions trapped between two other functions with the same limit.</p>
+        </section>
+
+        <section class="content-block">
+            <h2>Interactive Limit Exploration</h2>
+            <div class="geogebra-container">
+                <iframe src="https://www.geogebra.org/calculator" scrolling="no" title="Geogebra Calculator"></iframe>
+            </div>
         </section>
 
     </main>

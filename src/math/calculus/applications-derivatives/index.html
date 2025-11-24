@@ -3,32 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Function Analysis 101 | Personal Knowledge Project</title>
+    <title>Applications of Derivatives | EduProject</title>
 
-    <!-- Global CSS -->
     <link rel="stylesheet" href="../../../assets/css/style.css">
 
-    <!-- MathJax Config -->
+    <style>
+        .callout {
+            padding: 1.5em;
+            margin: 2em 0;
+            border-left: 5px solid;
+            border-radius: 4px;
+        }
+        .callout h3 { margin-top: 0; color: inherit; }
+        .crit-think { background-color: #e7f3fe; border-color: #2196F3; }
+        .common-pitfall { background-color: #fff0f0; border-color: #f44336; }
+        .geogebra-container { display: flex; justify-content: center; margin: 2em 0; }
+    </style>
+
     <script>
-        window.MathJax = {
-            tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']],
-                displayMath: [['$$', '$$'], ['\\[', '\\]']]
-            }
+        MathJax = {
+            tex: { inlineMath: [['$','$'], ['\\(','\\)']], displayMath: [['$$','$$'], ['\\[','\\]']], processEscapes: true },
+            options: { enableMenu: false },
         };
     </script>
-
-    <!-- MathJax CDN -->
-    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </head>
-
 <body>
 
-<!-- Navigation -->
-<nav class="navbar">
+<nav>
     <div class="nav-inner">
-        <div class="nav-title">EduProject</div>
-        <div class="nav-links">
+        <h2>EduProject</h2>
+        <div>
             <a href="../../../index.html">Home</a>
             <a href="../../index.html">Math</a>
             <a href="../../../physics/index.html">Physics</a>
@@ -38,130 +43,104 @@
 </nav>
 
 <div class="container">
-
     <header class="page-header">
-        <h1>Function Analysis 101</h1>
-        <p class="subtitle">Detailed lecture on analyzing functions with interactive practice.</p>
+        <h1>Applications of Derivatives</h1>
+        <p class="subtitle">Using rates of change to understand the behavior of functions.</p>
     </header>
 
     <main>
-
-        <!-- Detailed Lecture -->
         <section class="content-block">
-            <h2>1. Understanding Functions</h2>
-            <p>A <strong>function</strong> $f(x)$ is a rule that assigns exactly one output $y$ for each input $x$. To analyze a function, we focus on several key features:</p>
-            <ul>
-                <li><strong>Domain:</strong> All $x$ values where $f(x)$ is defined. Example: $f(x) = \frac{1}{x}$ has domain $x \neq 0$.</li>
-                <li><strong>Range:</strong> All possible outputs. Example: $f(x) = x^2$ has range $y \ge 0$.</li>
-                <li><strong>Asymptotes:</strong> Lines that the graph approaches but never reaches. Can be vertical, horizontal, or oblique.</li>
-                <li><strong>Extremums:</strong> Points where the function reaches local maxima or minima. Often found by solving $f'(x) = 0$.</li>
-            </ul>
-        </section>
+            <h2>1. The First Derivative Test: Increasing, Decreasing, and Extrema</h2>
+            <p>The first derivative, $f'(x)$, tells us the slope of the original function $f(x)$. We can use its sign to determine where the function is increasing or decreasing.</p>
+            <table class="styled-table">
+                <thead><tr><th>If $f'(x)$ is...</th><th>Then $f(x)$ is...</th></tr></thead>
+                <tbody>
+                    <tr><td>Positive ($f'(x) > 0$)</td><td>Increasing</td></tr>
+                    <tr><td>Negative ($f'(x) < 0$)</td><td>Decreasing</td></tr>
+                    <tr><td>Zero or Undefined</td><td>At a <strong>critical point</strong> (candidate for max or min).</td></tr>
+                </tbody>
+            </table>
 
-        <section class="content-block">
-            <h2>2. Domain and Range</h2>
-            <p>Step-by-step:</p>
-            <ol>
-                <li><strong>Domain:</strong> Look for values where the function is undefined (division by zero, square roots of negative numbers, logarithms of non-positive numbers).</li>
-                <li><strong>Range:</strong> Analyze the outputs by looking at the graph or solving inequalities for $y$ in terms of $x$.</li>
-            </ol>
-            <p><strong>Example:</strong> $f(x) = \sqrt{x-2}$</p>
-            <ul>
-                <li>Domain: $x - 2 \ge 0 \Rightarrow x \ge 2$</li>
-                <li>Range: $y \ge 0$</li>
-            </ul>
-        </section>
+            <div class="callout common-pitfall">
+                <h3>Systematic Error: Critical Point vs. Extremum</h3>
+                <p>A critical point ($f'(c)=0$) is not automatically a maximum or minimum. For $f(x)=x^3$, $f'(0)=0$, but $x=0$ is neither. Check the sign change of $f'(x)$ around the critical point.</p>
+            </div>
 
-        <section class="content-block">
-            <h2>3. Asymptotes</h2>
-            <ul>
-                <li><strong>Vertical asymptotes:</strong> Set denominator = 0. Example: $f(x) = \frac{1}{x-3} \Rightarrow x=3$ is vertical asymptote.</li>
-                <li><strong>Horizontal asymptotes:</strong> Compute $\lim_{x\to\infty} f(x)$ and $\lim_{x\to-\infty} f(x)$. Example: $f(x) = \frac{2x+1}{x-3} \Rightarrow y = 2$.</li>
-                <li><strong>Oblique asymptotes:</strong> Occur when degree numerator = degree denominator + 1. Use polynomial division.</li>
-            </ul>
-        </section>
-
-        <section class="content-block">
-            <h2>4. Extrema</h2>
-            <p>Local maxima and minima occur where the derivative is zero or undefined.</p>
-            <p>Step-by-step:</p>
-            <ol>
-                <li>Compute $f'(x)$.</li>
-                <li>Solve $f'(x) = 0$ for critical points.</li>
-                <li>Check $f''(x)$ or use first derivative test to classify maxima/minima.</li>
-            </ol>
-            <p><strong>Example:</strong> $f(x) = x^2 - 4x + 3$</p>
-            <ul>
-                <li>$f'(x) = 2x - 4 = 0 \Rightarrow x=2$</li>
-                <li>Check second derivative: $f''(x) = 2 > 0 \Rightarrow$ local minimum at $(2, f(2)) = (2, -1)$</li>
-            </ul>
-        </section>
-
-        <!-- GeoGebra Practice -->
-        <section class="content-block">
-            <h2>Interactive Practice</h2>
-            <p>Use the blank GeoGebra calculator below to plot any function, find domain, range, asymptotes, and extrema.</p>
             <div class="geogebra-container">
-                <iframe 
-                    src="https://www.geogebra.org/calculator" 
-                    title="GeoGebra Calculator" 
-                    width="100%" 
-                    height="500" 
-                    frameborder="0" 
-                    scrolling="no">
-                </iframe>
+                <iframe scrolling="no" title="GeoGebra Calculator" src="https://www.geogebra.org/calculator?embed" width="100%" height="600" style="border:0;"></iframe>
             </div>
         </section>
 
-        <!-- Exercises -->
         <section class="content-block">
-            <h2>Exercises</h2>
-            <p>Analyze each function using GeoGebra and your lecture notes:</p>
-            <ol>
-                <li>$f(x) = x^3 - 3x^2 + 2$ — find domain, range, and extremums.</li>
-                <li>$f(x) = \frac{x+1}{x-2}$ — find vertical & horizontal asymptotes.</li>
-                <li>$f(x) = \sqrt{x-1}$ — find domain and range.</li>
-                <li>$f(x) = \sin(x)$ — find maxima, minima, and zeros.</li>
-                <li>Choose your own function and identify all key features.</li>
-            </ol>
+            <h2>2. The Second Derivative Test: Concavity</h2>
+            <p>The second derivative, $f''(x)$, tells us the rate of change of the slope and helps determine concavity.</p>
+            <table class="styled-table">
+                <thead><tr><th>If $f''(x)$ is...</th><th>Then $f(x)$ is...</th></tr></thead>
+                <tbody>
+                    <tr><td>Positive ($f''(x) > 0$)</td><td>Concave Up</td></tr>
+                    <tr><td>Negative ($f''(x) < 0$)</td><td>Concave Down</td></tr>
+                    <tr><td>Zero or Undefined</td><td>Candidate for <strong>point of inflection</strong>.</td></tr>
+                </tbody>
+            </table>
+
+            <div class="callout crit-think">
+                <h3>Second Derivative and Extrema</h3>
+                <ul>
+                    <li>If $f''(c) > 0$, $f(c)$ is local minimum.</li>
+                    <li>If $f''(c) < 0$, $f(c)$ is local maximum.</li>
+                    <li>If $f''(c) = 0$, inconclusive. Use First Derivative Test.</li>
+                </ul>
+            </div>
+
+            <div class="geogebra-container">
+                <iframe scrolling="no" title="GeoGebra Calculator" src="https://www.geogebra.org/calculator?embed" width="100%" height="600" style="border:0;"></iframe>
+            </div>
         </section>
 
-        <!-- Tips -->
         <section class="content-block">
-            <h2>Tips</h2>
-            <ul>
-                <li>Always check for undefined points first for domain and vertical asymptotes.</li>
-                <li>Use limits to determine horizontal asymptotes.</li>
-                <li>Derivatives are your main tool for extremums.</li>
-                <li>GeoGebra is your visual check — compare analytical vs graphical findings.</li>
-            </ul>
+            <h2>3. Optimization: Finding the Best Solution</h2>
+            <p>Optimization finds absolute maximum/minimum values under constraints. Steps:</p>
+            <table class="styled-table">
+                <thead><tr><th>Step</th><th>Action</th></tr></thead>
+                <tbody>
+                    <tr><td>1. Model</td><td>Identify objective function and constraints.</td></tr>
+                    <tr><td>2. Substitution</td><td>Rewrite objective in single variable using constraints.</td></tr>
+                    <tr><td>3. Domain</td><td>Determine feasible domain.</td></tr>
+                    <tr><td>4. Calculus</td><td>Find derivative and critical points.</td></tr>
+                    <tr><td>5. Verification</td><td>Evaluate function at critical points and endpoints.</td></tr>
+                </tbody>
+            </table>
+
+            <div class="geogebra-container">
+                <iframe scrolling="no" title="GeoGebra Calculator" src="https://www.geogebra.org/calculator?embed" width="100%" height="600" style="border:0;"></iframe>
+            </div>
         </section>
 
+        <section class="content-block">
+            <h2>4. A Worked Example</h2>
+            <p>Analyze $f(x) = x^3 - 6x^2 + 9x + 1$.</p>
+            <table class="styled-table">
+                <thead><tr><th>Component</th><th>Result</th></tr></thead>
+                <tbody>
+                    <tr><td>First Derivative</td><td>$f'(x) = 3x^2 - 12x + 9$</td></tr>
+                    <tr><td>Critical Points</td><td>$x=1, x=3$</td></tr>
+                    <tr><td>Increasing</td><td>$(-\infty,1) \cup (3,\infty)$</td></tr>
+                    <tr><td>Decreasing</td><td>$(1,3)$</td></tr>
+                    <tr><td>Local Maximum</td><td>$f(1)=5$</td></tr>
+                    <tr><td>Local Minimum</td><td>$f(3)=1$</td></tr>
+                    <tr><td>Second Derivative</td><td>$f''(x) = 6x - 12$</td></tr>
+                    <tr><td>Inflection Point</td><td>$x=2, f(2)=3$</td></tr>
+                    <tr><td>Concave Up</td><td>$(2,\infty)$</td></tr>
+                    <tr><td>Concave Down</td><td>$(-\infty,2)$</td></tr>
+                </tbody>
+            </table>
+        </section>
     </main>
 </div>
 
 <footer>
-    <p>EduProject © 2025 | GPLv3+</p>
+    <p>EduProject &copy; 2025 | Licensed under GPL v3+</p>
 </footer>
-
-<style>
-    /* Responsive GeoGebra container */
-    .geogebra-container {
-        width: 100%;
-        max-width: 100%;
-        height: 500px;
-        margin: 1em 0;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        overflow: hidden;
-    }
-
-    .geogebra-container iframe {
-        width: 100%;
-        height: 100%;
-        border: none;
-    }
-</style>
 
 </body>
 </html>
