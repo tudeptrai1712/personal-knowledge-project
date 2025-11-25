@@ -3,9 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Physics | EduProject</title>
+    <title>Physics Grade 12 | Formula and Theory Guide</title>
+    
     <link rel="stylesheet" href="../assets/css/style.css">
-    <!-- MathJax Configuration -->
+
+    <style>
+        /* --- VISUAL LEARNER STYLES --- */
+        
+        .interactive-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 20px 0;
+            background: #eef2f5;
+            padding: 15px;
+            border-left: 5px solid var(--accent-color);
+            border-radius: 4px;
+        }
+        
+        .sim-frame {
+            width: 100%;
+            height: 400px; 
+            border: 1px solid #ddd;
+            background: white;
+            border-radius: 4px;
+        }
+
+        .sim-label {
+            font-weight: bold;
+            font-size: 0.9rem;
+            color: #555;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Formula Card Styling (Enhanced for multiple formulas/parameters) */
+        .formula-card {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 8px;
+            text-align: left; /* Changed to left-align for detailed lists */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.07);
+            font-size: 0.9em;
+        }
+        .formula-card h4 { margin: 0 0 10px 0; font-size: 1em; color: var(--primary-color); border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        
+        .parameter-list {
+            list-style: none; 
+            padding-left: 0; 
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+        .parameter-list strong { color: #222; }
+
+        .curriculum-group {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .lesson-item {
+            padding: 12px 0;
+            border-bottom: 1px dashed #eee;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .lesson-header {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+        }
+
+        .lesson-number {
+            font-family: monospace;
+            color: var(--accent-color);
+            font-weight: bold;
+            min-width: 60px;
+        }
+
+        .lesson-title {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .lesson-details {
+            margin-left: 70px;
+            font-size: 0.9em;
+            color: #444;
+            margin-top: 5px;
+        }
+
+        h2 {
+            margin-top: 2em;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent-color);
+        }
+    </style>
+
     <script>
         window.MathJax = {
             tex: {
@@ -14,94 +110,378 @@
             }
         };
     </script>
-    <!-- MathJax (CDN) -->
     <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </head>
+
 <body>
 
-<!-- NAVIGATION -->
-<nav>
+<nav class="navbar">
     <div class="nav-inner">
-        <h2>EduProject</h2>
-        <div>
+        <div class="nav-title">EduProject</div>
+        <div class="nav-links">
             <a href="../index.html">Home</a>
             <a href="../math/index.html">Math</a>
             <a href="index.html">Physics</a>
-            <a href="../informatics/index.html">Informatics</a>
+            <a href="../informatics/index.html" style="margin-left: 20px;">Informatics</a>
         </div>
     </div>
 </nav>
 
 <div class="container">
 
+    <header class="page-header">
+        <h1>Grade 12 Physics Formula & Theory Guide</h1>
+        <p class="subtitle">Comprehensive overview aligned with the 25 required lessons and key formulas.</p>
+    </header>
+
     <main>
 
+        <!-- CHAPTER 1: Thermal Physics (Lessons 1-7) -->
         <section class="content-block">
-            <h2>Why English?</h2>
-            <p>
-                Physics research and academic materials worldwide use English.
-                Using English here keeps terminology consistent with global standards.
-            </p>
-        </section>
+            <h2>Chapter 1: Thermal Physics</h2>
+            <p>Formulas related to heat, phase changes, work, and energy conservation. </p>
 
-        <section class="content-block">
-            <h2>Interactive Simulation</h2>
-            <p>Physics becomes intuitive when you manipulate variables interactively.</p>
-
-            <iframe
-                    src="https://phet.colorado.edu/sims/html/projectile-motion/latest/projectile-motion_en.html"
-                    class="sim-frame">
-            </iframe>
-        </section>
-
-        <section class="content-block">
-            <h2>MathJax Example</h2>
-
-            <p class="math-example">
-                \[
-                \vec{F} = m \frac{d\vec{v}}{dt}
-                \]
-            </p>
-
-            <p class="math-example">
-                \[
-                E = \frac{1}{2} k x^2
-                \]
-            </p>
-        </section>
-
-        <section class="content-block">
-            <h2>Overview of High School Physics</h2>
-            <ul class="chapter-list">
-                <li>
-                    <strong>Grade 11 Physics:</strong>
-                    <ul>
-                        <li><a href="mechanics/index.html">Mechanics</a></li>
-                        <li>Oscillations, Waves, and Sound</li>
-                        <li><a href="electromagnetism/index.html">Electrostatics & Circuits</a></li>
-                    </ul>
+            <ul class="curriculum-group">
+                <li class="lesson-item">
+                    <div class="lesson-header">
+                        <span class="lesson-number">Lesson 1-7</span>
+                        <span class="lesson-title">Heat, Energy, and Phase Change Calculations</span>
+                    </div>
+                    <div class="lesson-details">
+                        The quantitative relationships governing thermal interactions, used in Lessons 4, 5, 6, and 7.
+                        <div class="formula-card">
+                            <h4>Key Thermal Formulas</h4>
+                            $$ Q = mc(t_2 - t_1) \quad (\text{Heat for Temp Change}) $$
+                            $$ Q = \lambda m \quad (\text{Heat of Fusion}) $$
+                            $$ Q = L m \quad (\text{Heat of Vaporization}) $$
+                            
+                            <p style="font-weight: bold; margin-top: 15px;">Heat Balance Principle:</p>
+                            $$ Q_{absorbed} + Q_{released} = 0 $$
+                            
+                            <p style="font-weight: bold; margin-top: 15px;">Parameter Guide:</p>
+                            <ul class="parameter-list">
+                                <li>$Q$: Heat quantity (J)</li>
+                                <li>$m$: Mass of substance (kg)</li>
+                                <li>$c$: Specific heat capacity ($\text{J/kg}\cdot\text{K}$)</li>
+                                <li>$t_1, t_2$: Initial and final temperatures ($\text{C}^\circ$)</li>
+                                <li>$\lambda$: Specific heat of fusion ($\text{J/kg}$)</li>
+                                <li>$L$: Specific heat of vaporization ($\text{J/kg}$)</li>
+                            </ul>
+                        </div>
+                    </div>
                 </li>
-                <li>
-                    <strong>Grade 12 Physics:</strong>
-                    <ul>
-                        <li><a href="thermodynamics/index.html">Thermal Physics</a></li>
-                        <li><a href="electromagnetism/index.html">Magnetism & Electromagnetism</a></li>
-                        <li><a href="modern/index.html">Nuclear Physics</a></li>
-                    </ul>
+                
+                <li class="lesson-item">
+                    <div class="lesson-header">
+                        <span class="lesson-number">Lesson 2</span>
+                        <span class="lesson-title">Internal Energy &amp; First Law of Thermodynamics</span>
+                    </div>
+                    <div class="lesson-details">
+                        <div class="formula-card">
+                            <h4>First Law of Thermodynamics &amp; Work</h4>
+                            $$ \Delta U = A + Q $$
+                            $$ A = p \Delta V \quad (\text{Work in constant pressure process}) $$
+                            $$ U = W_k + W_t \quad (\text{Total Internal Energy}) $$
+                            
+                            <p style="font-weight: bold; margin-top: 15px;">Parameter Guide:</p>
+                            <ul class="parameter-list">
+                                <li>$\Delta U$: Change in internal energy (J)</li>
+                                <li>$A$: Work done *on* the system (J) ($A > 0$ if volume decreases)</li>
+                                <li>$Q$: Heat absorbed by the system (J) ($Q > 0$ if heat is absorbed)</li>
+                                <li>$W_k, W_t$: Kinetic and potential energies of molecules, respectively.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="lesson-item">
+                    <div class="lesson-header">
+                        <span class="lesson-number">Lesson 3</span>
+                        <span class="lesson-title">Temperature Scales and Conversion</span>
+                    </div>
+                    <div class="lesson-details">
+                        <div class="formula-card">
+                            <h4>Temperature Conversion</h4>
+                            $$ T(\text{K}) = t(\text{C}^\circ) + 273 $$
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="lesson-item">
+                    <div class="lesson-header">
+                        <span class="lesson-number">Lesson 7</span>
+                        <span class="lesson-title">Heat Engine Efficiency</span>
+                    </div>
+                    <div class="lesson-details">
+                        <div class="formula-card">
+                            $$ H = \frac{|A|}{|Q_1|} = \frac{Q_1 - Q_2}{Q_1} $$
+                            <p style="font-weight: bold; margin-top: 15px;">Parameter Guide:</p>
+                            <ul class="parameter-list">
+                                <li>$H$: Efficiency (dimensionless)</li>
+                                <li>$|A|$: Net work performed (J)</li>
+                                <li>$Q_1$: Heat received from the hot source (J)</li>
+                                <li>$Q_2$: Heat released to the cold sink (J)</li>
+                            </ul>
+                        </div>
+                    </div>
                 </li>
             </ul>
-            <p>
-                Together, these units build understanding of energy, forces, waves, and atomic interactions, forming a foundation for advanced studies in physics and engineering.
-            </p>
+        </section>
+
+        <!-- CHAPTER 2: Ideal Gas (Lessons 8-13) -->
+        <section class="content-block">
+            <h2>Chapter 2: Ideal Gas</h2>
+            <p>The core equations linking macroscopic state variables (P, V, T) and microscopic properties ($\bar{E}_k$, $\bar{v}$).</p>
+
+            <ul class="curriculum-group">
+                <li class="lesson-item">
+                    <div class="lesson-header">
+                        <span class="lesson-number">Lesson 9-11</span>
+                        <span class="lesson-title">Gas Laws &amp; Equation of State</span>
+                    </div>
+                    <div class="lesson-details">
+                        <div class="formula-card">
+                            <h4>Isoprocesses and Combined Gas Law</h4>
+                            $$ p_1 V_1 = p_2 V_2 \quad (\text{Boyle's Law, Isothermal, } T = \text{const}) $$
+                            $$ \frac{V_1}{T_1} = \frac{V_2}{T_2} \quad (\text{Charles's Law, Isobaric, } p = \text{const}) $$
+                            $$ \frac{p_1}{T_1} = \frac{p_2}{T_2} \quad (\text{Gay-Lussac's Law, Isochoric, } V = \text{const}) $$
+                            
+                            <p style="font-weight: bold; margin-top: 15px;">Ideal Gas Equation of State:</p>
+                            $$ pV = nRT = \frac{m}{M} R T $$
+                            <p style="font-weight: bold; margin-top: 15px;">Parameter Guide:</p>
+                            <ul class="parameter-list">
+                                <li>$p$: Absolute pressure ($\text{Pa}$)</li>
+                                <li>$V$: Volume ($\text{m}^3$)</li>
+                                <li>$T$: Absolute Temperature ($\text{K}$)</li>
+                                <li>$n$: Number of moles ($n = m/M$)</li>
+                                <li>$R$: Universal Gas Constant ($\approx 8.31 \text{J/mol}\cdot\text{K}$)</li>
+                                <li>$N_A$: Avogadro Constant ($6.02 \times 10^{23} \text{mol}^{-1}$)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="lesson-item">
+                    <div class="lesson-header">
+                        <span class="lesson-number">Lesson 12</span>
+                        <span class="lesson-title">Kinetic Theory and Temperature</span>
+                    </div>
+                    <div class="lesson-details">
+                        The microscopic origin of pressure and temperature.
+                        <div class="formula-card">
+                            <h4>Microscopic Gas Formulas</h4>
+                            $$ p = \frac{2}{3} n_0 \bar{E}_k = \frac{1}{3} \rho \bar{v}^2 \quad (\text{Pressure}) $$
+                            $$ \bar{E}_k = \frac{3}{2} kT \quad (\text{Mean Kinetic Energy per molecule}) $$
+                            $$ U = \frac{3}{2} n R T \quad (\text{Total Internal Energy for monatomic ideal gas}) $$
+                            $$ \bar{v} = \sqrt{\frac{3 R T}{M}} \quad (\text{Root Mean Square Speed}) $$
+                            
+                            <p style="font-weight: bold; margin-top: 15px;">Parameter Guide:</p>
+                            <ul class="parameter-list">
+                                <li>$\bar{E}_k$: Mean Translational Kinetic Energy (J)</li>
+                                <li>$k$: Boltzmann Constant ($\approx 1.38 \times 10^{-23} \text{J/K}$)</li>
+                                <li>$n_0$: Molecular concentration ($N/V$, molecules/$\text{m}^3$)</li>
+                                <li>$\rho$: Density ($\text{kg/m}^3$)</li>
+                                <li>$\bar{v}$: RMS Speed ($\text{m/s}$)</li>
+                                <li>$M$: Molar Mass ($\text{kg/mol}$)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                
+                <!-- Visual Hook: Gas Properties -->
+                <div class="interactive-container">
+                    <div class="sim-label">Visual Simulation: The Gas Laws</div>
+                    <p style="font-size: 0.85em; margin-bottom: 10px;">Visualize the relationships for Isothermal, Isobaric, and Isochoric processes.</p>
+                    <iframe src="https://phet.colorado.edu/sims/html/gas-properties/latest/gas-properties_en.html" class="sim-frame" title="Gas Properties" loading="lazy"></iframe>
+                </div>
+            </ul>
+        </section>
+
+        <!-- CHAPTER 3: Magnetism & Induction (Lessons 14-20) -->
+        <section class="content-block">
+            <h2>Chapter 3: Magnetism and Induction</h2>
+            <p>Formulas for magnetic forces, fields, and the generation of alternating current.</p>
+
+            <ul class="curriculum-group">
+                <li class="lesson-item">
+                    <div class="lesson-header">
+                        <span class="lesson-number">Lesson 15</span>
+                        <span class="lesson-title">Ampere's Force and Lorentz Force</span>
+                    </div>
+                    <div class="lesson-details">
+                        Forces exerted by a magnetic field on current-carrying objects and moving charges.
+                        <div class="formula-card">
+                            <h4>Magnetic Forces</h4>
+                            $$ F = I B l \sin \theta \quad (\text{Ampere's Force on a wire}) $$
+                            $$ f = |q| v B \sin \alpha \quad (\text{Lorentz Force on a charge}) $$
+                            
+                            <p style="font-weight: bold; margin-top: 15px;">Parameter Guide:</p>
+                            <ul class="parameter-list">
+                                <li>$F, f$: Force (N)</li>
+                                <li>$I$: Current (A)</li>
+                                <li>$B$: Magnetic Induction/Field Strength (T, Tesla)</li>
+                                <li>$l$: Length of wire (m)</li>
+                                <li>$q$: Electric Charge (C)</li>
+                                <li>$v$: Velocity of charge (m/s)</li>
+                                <li>$\theta, \alpha$: Angle between the direction of current/velocity and $\vec{B}$.</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- NEW SECTION: Hand Rules -->
+                        <div class="formula-card" style="margin-top: 20px; border-left: 5px solid #ff7f50;">
+                            <h4>Direction Rules (Left and Right Hand)</h4>
+                            <p style="font-weight: bold;">1. Right-Hand Grip Rule (Magnetic Field Direction):</p>
+                            <ul class="parameter-list">
+                                <li>Use to find the direction of the magnetic field ($\vec{B}$) created by a current ($I$).</li>
+                                <li>Curl fingers in the direction of $\vec{B}$ when the thumb points in the direction of $I$ (or velocity $\vec{v}$ of positive charges).</li>
+                            </ul>
+                            
+                            <p style="font-weight: bold; margin-top: 10px;">2. Fleming's Left-Hand Rule (Force Direction):</p>
+                            <ul class="parameter-list">
+                                <li>Use to find the direction of the force ($\vec{F}$ or $\vec{f}$) on a current-carrying wire (Ampere's Force) or a moving charge (Lorentz Force).</li>
+                                <li><strong style="color: var(--accent-color);">F</strong>orefinger points in the direction of the magnetic **F**ield ($\vec{B}$).</li>
+                                <li><strong style="color: var(--primary-color);">C</strong>enter finger points in the direction of the **C**urrent ($I$) or the velocity ($\vec{v}$) of positive charges.</li>
+                                <li><strong style="color: #27ae60;">Th</strong>umb points in the direction of the **Th**rust/Force ($\vec{F}$).</li>
+                                <li><em style="color: #e67e22;">Note: For negative charges (like electrons), the force direction is opposite to the thumb.</em></li>
+                            </ul>
+                        </div>
+                        <!-- END NEW SECTION -->
+                        
+                    </div>
+                </li>
+                
+                <li class="lesson-item">
+                    <div class="lesson-header">
+                        <span class="lesson-number">Lesson 16</span>
+                        <span class="lesson-title">Magnetic Flux and Faraday's Law</span>
+                    </div>
+                    <div class="lesson-details">
+                        <div class="formula-card">
+                            <h4>Flux and Induced EMF</h4>
+                            $$ \Phi = N B S \cos \alpha \quad (\text{Magnetic Flux}) $$
+                            $$ |e| = \left| \frac{\Delta \Phi}{\Delta t} \right| \quad (\text{Faraday's Law of Induction}) $$
+                            
+                            <p style="font-weight: bold; margin-top: 15px;">Parameter Guide:</p>
+                            <ul class="parameter-list">
+                                <li>$\Phi$: Magnetic Flux (Wb, Weber)</li>
+                                <li>$N$: Number of turns</li>
+                                <li>$S$: Area of the loop ($\text{m}^2$)</li>
+                                <li>$\alpha$: Angle between $\vec{B}$ and the normal vector to the area.</li>
+                                <li>$|e|$: Induced Electromotive Force (V)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Visual Hook: Induction -->
+                <div class="interactive-container">
+                    <div class="sim-label">Visual Simulation: Faraday's Law</div>
+                    <iframe src="https://phet.colorado.edu/sims/html/faradays-law/latest/faradays-law_en.html" class="sim-frame" title="Faraday's Law" loading="lazy"></iframe>
+                </div>
+                
+                <li class="lesson-item">
+                    <div class="lesson-header">
+                        <span class="lesson-number">Lesson 17-18</span>
+                        <span class="lesson-title">Alternating Current (AC) and Transformers</span>
+                    </div>
+                    <div class="lesson-details">
+                        <div class="formula-card">
+                            <h4>AC Values and Transformers</h4>
+                            $$ e = E_0 \cos(\omega t + \phi_0) \quad (\text{Instantaneous EMF}) $$
+                            $$ u = U_0 \cos(\omega t + \phi_u) \quad (\text{Instantaneous Voltage}) $$
+                            $$ I = \frac{I_0}{\sqrt{2}}, \quad U = \frac{U_0}{\sqrt{2}} \quad (\text{RMS/Effective Values}) $$
+                            
+                            <p style="font-weight: bold; margin-top: 15px;">Transformer Ratio:</p>
+                            $$ \frac{U_1}{U_2} = \frac{N_1}{N_2} = \frac{I_2}{I_1} $$
+                            
+                            <p style="font-weight: bold; margin-top: 15px;">Parameter Guide:</p>
+                            <ul class="parameter-list">
+                                <li>$E_0, U_0, I_0$: Peak values of EMF, Voltage, Current.</li>
+                                <li>$E, U, I$: RMS (Effective) values.</li>
+                                <li>$N_1, N_2$: Number of turns in Primary (1) and Secondary (2) coils.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- CHAPTER 4: Nuclear Physics (Lessons 21-25) -->
+        <section class="content-block">
+            <h2>Chapter 4: Nuclear Physics</h2>
+            <p>Formulas for mass-energy conversion, binding energy, and radioactive decay rates. </p>
+
+            <ul class="curriculum-group">
+                <li class="lesson-item">
+                    <div class="lesson-header">
+                        <span class="lesson-number">Lesson 21-22</span>
+                        <span class="lesson-title">Nuclear Structure and Binding Energy</span>
+                    </div>
+                    <div class="lesson-details">
+                        <div class="formula-card">
+                            <h4>Structure and Energy</h4>
+                            $$ A = Z + N \quad (\text{Mass Number}) $$
+                            $$ \Delta m = [Z m_p + (A-Z) m_n] - m_X \quad (\text{Mass Defect}) $$
+                            $$ E_{bk} = \Delta m c^2 \quad (\text{Binding Energy}) $$
+                            
+                            <p style="font-weight: bold; margin-top: 15px;">Parameter Guide:</p>
+                            <ul class="parameter-list">
+                                <li>$A$: Mass number (Total nucleons)</li>
+                                <li>$Z$: Proton number</li>
+                                <li>$N$: Neutron number ($A-Z$)</li>
+                                <li>$\Delta m$: Mass defect (u, atomic mass units or kg)</li>
+                                <li>$m_p, m_n, m_X$: Mass of proton, neutron, and nucleus, respectively.</li>
+                                <li>$E_{bk}$: Binding Energy (J or MeV)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                
+                <li class="lesson-item">
+                    <div class="lesson-header">
+                        <span class="lesson-number">Lesson 23</span>
+                        <span class="lesson-title">Radioactivity and Decay Law</span>
+                    </div>
+                    <div class="lesson-details">
+                        <div class="formula-card">
+                            <h4>Radioactive Decay Formulas</h4>
+                            $$ N = N_0 e^{-\lambda t} = N_0 \left(\frac{1}{2}\right)^{t/T} \quad (\text{Remaining Nuclei}) $$
+                            $$ m = m_0 e^{-\lambda t} = m_0 \left(\frac{1}{2}\right)^{t/T} \quad (\text{Remaining Mass}) $$
+                            $$ \Delta N = N_0 \left(1 - \left(\frac{1}{2}\right)^{t/T}\right) \quad (\text{Decayed Nuclei}) $$
+                            $$ T = \frac{\ln 2}{\lambda} \quad (\text{Half-life}) $$
+
+                            <p style="font-weight: bold; margin-top: 15px;">Parameter Guide:</p>
+                            <ul class="parameter-list">
+                                <li>$N, m$: Number of nuclei/Mass remaining after time $t$.</li>
+                                <li>$N_0, m_0$: Initial number of nuclei/mass.</li>
+                                <li>$T$: Half-life (s, years, etc.)</li>
+                                <li>$\lambda$: Radioactive Decay Constant ($\text{s}^{-1}$)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                
+                <!-- Visual Hook: Alpha Decay -->
+                <div class="interactive-container">
+                                <iframe src="https://phet.colorado.edu/sims/cheerpj/nuclear-physics/latest/nuclear-physics.html?simulation=alpha-decay" class="sim-frame" title="Alpha Decay Simulation" loading="lazy"></iframe>
+                                <iframe src="https://phet.colorado.edu/sims/cheerpj/nuclear-physics/latest/nuclear-physics.html?simulation=nuclear-fission" class="sim-frame" title="Alpha Decay Simulation" loading="lazy"></iframe>
+                            </div>
+                
+                <li class="lesson-item">
+                    <div class="lesson-header">
+                        <span class="lesson-number">Lesson 24-25</span>
+                        <span class="lesson-title">Nuclear Industry and Practice Problems</span>
+                    </div>
+                    <div class="lesson-details">Application of the above concepts to nuclear fission and reactors.</div>
+                </li>
+            </ul>
         </section>
 
     </main>
-
 </div>
 
-<!-- FOOTER -->
 <footer>
-    <p>EduProject &copy; 2025 | Licensed under GPL v3+</p>
+    <p>EduProject © 2025 | GPLv3+</p>
 </footer>
 
 </body>

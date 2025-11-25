@@ -31,6 +31,9 @@ Our philosophy is that **AI should be a tool, not a replacement for human judgme
 
 However, every change made by the AI was reviewed, approved, and ultimately directed by the human developer. The final code, the architectural decisions, and the educational content are all the result of human oversight. This ensures that the AI's contributions are accurate, relevant, and aligned with the project's goals, maintaining full human accountability for the final product.
 
+In the spirit of "Bàn tay ta làm nên tất cả/ Có sức người sỏi đá cũng thành cơm" (Our hands make everything/ With human effort, even stones can become rice), we believe that technology should empower, not replace, human creativity and effort.
+
+
 ---
 
 ## How This Project Helps with Learning Difficulties
@@ -111,3 +114,10 @@ You can now access the website by navigating to `http://localhost:8080` in your 
   docker rm personal-knowledge-project
   podman rm personal-knowledge-project
   ```
+
+---
+## Inspiration for Networking
+- Bringus studio
+- Wolfgang's Channel
+- Jeff Geerling
+- Hardware Haven
