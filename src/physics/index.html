@@ -4,7 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Physics | EduProject</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+
+    <!-- Page-Specific Styles for PhET -->
+    <style>
+        .interactive-container {
+            display: flex;
+            justify-content: center;
+            margin: 2em 0;
+            flex-direction: column;
+            gap: 1.5em;
+        }
+        .sim-frame {
+            width: 100%;
+            height: 500px;
+            border: 0;
+        }
+        h2 {
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+        }
+        ul.chapter-list ul {
+            margin-left: 1em;
+            list-style-type: disc;
+        }
+        ul.chapter-list li {
+            margin: 0.5em 0;
+        }
+    </style>
+
     <!-- MathJax Configuration -->
     <script>
         window.MathJax = {
@@ -14,7 +42,6 @@
             }
         };
     </script>
-    <!-- MathJax (CDN) -->
     <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 </head>
 <body>
@@ -35,64 +62,69 @@
 <div class="container">
 
     <main>
-
-        <section class="content-block">
-            <h2>Why English?</h2>
-            <p>
-                Physics research and academic materials worldwide use English.
-                Using English here keeps terminology consistent with global standards.
-            </p>
-        </section>
-
-        <section class="content-block">
-            <h2>Interactive Simulation</h2>
-            <p>Physics becomes intuitive when you manipulate variables interactively.</p>
-
-            <iframe
-                    src="https://phet.colorado.edu/sims/html/projectile-motion/latest/projectile-motion_en.html"
-                    class="sim-frame">
-            </iframe>
-        </section>
-
-        <section class="content-block">
-            <h2>MathJax Example</h2>
-
-            <p class="math-example">
-                \[
-                \vec{F} = m \frac{d\vec{v}}{dt}
-                \]
-            </p>
-
-            <p class="math-example">
-                \[
-                E = \frac{1}{2} k x^2
-                \]
-            </p>
-        </section>
-
         <section class="content-block">
             <h2>Overview of High School Physics</h2>
             <ul class="chapter-list">
                 <li>
-                    <strong>Grade 11 Physics:</strong>
-                    <ul>
-                        <li><a href="mechanics/index.html">Mechanics</a></li>
-                        <li>Oscillations, Waves, and Sound</li>
-                        <li><a href="electromagnetism/index.html">Electrostatics & Circuits</a></li>
-                    </ul>
-                </li>
-                <li>
                     <strong>Grade 12 Physics:</strong>
                     <ul>
-                        <li><a href="thermodynamics/index.html">Thermal Physics</a></li>
-                        <li><a href="electromagnetism/index.html">Magnetism & Electromagnetism</a></li>
-                        <li><a href="modern/index.html">Nuclear Physics</a></li>
+                        <li>
+                            <strong>Chapter 1: Thermal Physics</strong>
+                            <ul>
+                                <li>Basic Theory: <a href="thermodynamics/index.html">Learn more</a></li>
+                                <li>Example: Heat transfer, Energy conservation</li>
+                                <li>PhET Interactive: 
+                                    <div class="interactive-container">
+                                        <iframe src="https://phet.colorado.edu/sims/html/energy-forms-and-changes/latest/energy-forms-and-changes_all.html" class="sim-frame" title="Energy Forms and Changes Simulation"></iframe>
+                                    </div>
+                                </li>
+                                <li>Further Explanation: <a href="thermodynamics/further.html" target="_blank">Detailed Concepts and Examples</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Chapter 2: Ideal Gas</strong>
+                            <ul>
+                                <li>Basic Theory: PV=nRT</li>
+                                <li>Example: Calculate pressure, volume, temperature</li>
+                                <li>PhET Interactive: 
+                                    <div class="interactive-container">
+                                        <iframe src="https://phet.colorado.edu/sims/html/gas-properties/latest/gas-properties_all.html" class="sim-frame" title="Gas Properties Simulation"></iframe>
+                                    </div>
+                                </li>
+                                <li>Further Explanation: <a href="ideal-gas/further.html" target="_blank">Detailed Concepts and Examples</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Chapter 3: Magnetism & Electromagnetism</strong>
+                            <ul>
+                                <li>Basic Theory: Electric field, Magnetic field, Lorentz force</li>
+                                <li>Example: Motion of charged particles</li>
+                                <li>PhET Interactive: 
+                                    <div class="interactive-container">
+                                        <iframe src="https://phet.colorado.edu/sims/html/charges-and-fields/latest/charges-and-fields_all.html" class="sim-frame" title="Charges and Fields Simulation"></iframe>
+                                        <iframe src="https://phet.colorado.edu/sims/html/magnetic-field/latest/magnetic-field_all.html" class="sim-frame" title="Magnet & Compass Simulation"></iframe>
+                                    </div>
+                                </li>
+                                <li>Further Explanation: <a href="electromagnetism/further.html" target="_blank">Detailed Concepts and Examples</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Chapter 4: Nuclear Physics</strong>
+                            <ul>
+                                <li>Basic Theory: Radioactive decay, Nuclear reactions</li>
+                                <li>Example: Calculate half-life, decay chains</li>
+                                <li>PhET Interactive: 
+                                    <div class="interactive-container">
+                                        <iframe src="https://phet.colorado.edu/sims/html/nuclear-decay/latest/nuclear-decay_all.html" class="sim-frame" title="Nuclear Decay Simulation"></iframe>
+                                    </div>
+                                </li>
+                                <li>Further Explanation: <a href="nuclear/further.html" target="_blank">Detailed Concepts and Examples</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
             </ul>
-            <p>
-                Together, these units build understanding of energy, forces, waves, and atomic interactions, forming a foundation for advanced studies in physics and engineering.
-            </p>
+            <p>Together, these units build understanding of energy, forces, waves, and atomic interactions, forming a foundation for advanced studies in physics and engineering.</p>
         </section>
 
     </main>
